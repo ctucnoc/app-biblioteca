@@ -1,0 +1,14 @@
+server:
+  port: 9090
+  
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5454/db_biblioteca?useSSL=false
+    username: biblioteca
+    password: biblioteca
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
