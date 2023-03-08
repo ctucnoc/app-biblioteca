@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "1e337b50-88d7-45af-a67d-ba0209813293",
 		"name": "app-biblioteca",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
 		{
@@ -13,18 +13,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": {
-							"raw": "http://localhost:9090/editorial/findAll",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "9090",
-							"path": [
-								"editorial",
-								"findAll"
-							]
-						}
+						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial"
 					},
 					"response": []
 				},
@@ -32,7 +21,77 @@
 					"name": "findById",
 					"request": {
 						"method": "GET",
-						"header": []
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial/1"
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"editorial la nueva era 2023444\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"editorial san cristobal abc\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial/10"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "author",
+			"item": [
+				{
+					"name": "findByKeyWord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=cesar",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"authors",
+								"author"
+							],
+							"query": [
+								{
+									"key": "key_word",
+									"value": "cesar"
+								}
+							]
+						}
 					},
 					"response": []
 				}
