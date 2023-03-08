@@ -13,4 +13,5 @@ public interface AuthorRepository extends JpaRepository<Author, Long> {
 
 	@Query(value = BibliotecaConstant.SP_SEARCH_AUTHOR, nativeQuery = true, countQuery = BibliotecaConstant.SP_SEARCH_AUTHOR_COUNT)
 	public List<Author> findByKeyWordSQL(String key_word, String state);
+	
 }
