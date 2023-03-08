@@ -13,7 +13,7 @@ import com.pe.crce.biblioteca.service.AuthorService;
 
 @RestController
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
-@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
+//@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
 public class AuthorController {
 
 	final AuthorService authorService;

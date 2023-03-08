@@ -4,7 +4,7 @@ public final class BibliotecaConstant {
 
 	// STATE
 	public static final String STATE_ACTIVE = "1";
-	public static final String STATE_DESABLE = "0";
+	public static final String STATE_INSCTIVE = "0";
 
 	// API VERSION
 	public static final String API_VERSION = "/v1";

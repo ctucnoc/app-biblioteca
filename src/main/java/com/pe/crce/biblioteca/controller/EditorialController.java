@@ -15,7 +15,7 @@ import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 
 @RestController
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
-@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
+//@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
 public class EditorialController {
 
 	private EditorialService editorialService;
