@@ -12,4 +12,13 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
-      
+
+springdoc:
+  swagger-ui:
+      enabled: true
+      path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /api-docs
+  packages-to-scan:
+  - com.pe.crce.biblioteca.controller

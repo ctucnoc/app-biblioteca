@@ -39,6 +39,8 @@ public final class BibliotecaConstant {
 	// =============================================================================================
 	public static final String SP_SEARCH_AUTHOR = "select * from dbo.fn_search_author(?1,?2)";
 	public static final String SP_SEARCH_AUTHOR_COUNT = "select count(*) from dbo.fn_search_author(?1,?2)";
+	public static final String SP_SAVE_AUTHOR = "select * from dbo.fn_save_author(?1,?2)";
+	public static final String SP_SAVE_AUTHOR_COUNT = "select count(*) from dbo.fn_save_author(?1,?2)";
 	
 
 }

@@ -73,7 +73,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=cesar",
+							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=pabli",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -88,10 +88,28 @@
 							"query": [
 								{
 									"key": "key_word",
-									"value": "cesar"
+									"value": "pabli"
 								}
 							]
 						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"pablito\",\r\n    \"lastName\":\"bautista\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/authors/author"
 					},
 					"response": []
 				}

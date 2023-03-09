@@ -5,6 +5,7 @@ import java.util.stream.Collectors;
 import org.springframework.stereotype.Service;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.AuthorDTO;
+import com.pe.crce.biblioteca.dto.request.AuthorDTORequest;
 import com.pe.crce.biblioteca.model.Author;
 import com.pe.crce.biblioteca.repository.AuthorRepository;
 import com.pe.crce.biblioteca.service.AuthorService;
@@ -31,6 +32,11 @@ public class AuthorServiceImpl implements AuthorService{
 				.id(author.getId())
 				.authorName(author.getName() + " "+author.getLastName())
 				.build();
+	}
+
+	@Override
+	public AuthorDTO saveSQL(AuthorDTORequest dto) {
+		return convertBeanToDto(this.authorRepository.saveSQL(dto.getName(), dto.getLastName()));
 	}
 	
 }
