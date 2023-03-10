@@ -6,13 +6,16 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import com.pe.crce.biblioteca.constant.BibliotecaConstant;
+
 import lombok.Data;
 import lombok.ToString;
 
 @Data
 @ToString
 @Entity
-@Table(name = "t_editorial", schema = "dbo")
+@Table(name = BibliotecaConstant.TAB_NAME_EDITORIAL,schema = BibliotecaConstant.SEC_NAME_DBO)
 public class Editorial {
 
 	@Id

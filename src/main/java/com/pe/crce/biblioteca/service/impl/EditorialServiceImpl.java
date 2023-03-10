@@ -2,6 +2,8 @@ package com.pe.crce.biblioteca.service.impl;
 
 import java.util.ArrayList;
 import java.util.List;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.EditorialDTO;
@@ -54,6 +56,20 @@ public class EditorialServiceImpl implements EditorialService {
 		Editorial editorial = this.editorialRespository.findById(id).get();
 		editorial.setName(dto.getName());
 		return this.editorialRespository.save(editorial).getId();
+	}
+
+	@Override
+	public Page<EditorialDTO> findByNameLike(String name, Pageable pageable) {
+		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%"+name+"%", BibliotecaConstant.STATE_ACTIVE, pageable);
+		return editorialPages
+				.map((bean)->convertBeanToDto(bean));
+	}
+	
+	public EditorialDTO convertBeanToDto(Editorial editorial) {
+		return EditorialDTO.builder()
+				.id(editorial.getId())
+				.name(editorial.getName())
+				.build();
 	}
 
 }

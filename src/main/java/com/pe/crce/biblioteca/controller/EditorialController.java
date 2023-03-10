@@ -1,5 +1,7 @@
 package com.pe.crce.biblioteca.controller;
-import java.util.List;
+
+import javax.validation.Valid;
+import org.springframework.data.domain.Page;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -7,26 +9,38 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.pe.crce.biblioteca.dto.EditorialDTO;
+import com.pe.crce.biblioteca.dto.PageableDTO;
 import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
 import com.pe.crce.biblioteca.service.EditorialService;
+import com.pe.crce.biblioteca.util.BibliotecaUtil;
+
+import lombok.extern.slf4j.Slf4j;
+
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 
+@Slf4j
 @RestController
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
-//@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
+@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
 public class EditorialController {
 
-	private EditorialService editorialService;
+	final
+	EditorialService editorialService;
+	
+	final BibliotecaUtil util;
 
-	public EditorialController(EditorialService editorialService) {
+	public EditorialController(EditorialService editorialService,BibliotecaUtil util) {
 		this.editorialService = editorialService;
+		this.util = util;
 	}
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
-	public List<EditorialDTO> findAll(){
-		return this.editorialService.findaLL();
+	public Page<EditorialDTO> findByName(@RequestParam String name,@Valid PageableDTO pageable){
+		log.info("crce EditorialController -> {} "+pageable);
+		return this.editorialService.findByNameLike(name, this.util.getPageable(pageable));
 	}
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL + BibliotecaConstant.RESOURCE_GENERIC_ID)
