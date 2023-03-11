@@ -9,6 +9,6 @@ import com.pe.crce.biblioteca.model.Editorial;
 @Repository
 public interface EditorialRespository extends JpaRepository<Editorial, Long>{
 	
-	public Page<Editorial> findByNameLikeAndState(String name,String state,Pageable pageable);
+	public Page<Editorial> findByNameLikeAndState(String name,String state,Pageable pePageable);
 
 }

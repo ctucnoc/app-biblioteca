@@ -59,10 +59,10 @@ public class EditorialServiceImpl implements EditorialService {
 	}
 
 	@Override
-	public Page<EditorialDTO> findByNameLike(String name, Pageable pageable) {
-		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%"+name+"%", BibliotecaConstant.STATE_ACTIVE, pageable);
+	public Page<EditorialDTO> findByNameLike(String name,Pageable pageable) {
+		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%"+name+"%", BibliotecaConstant.STATE_ACTIVE,pageable);
 		return editorialPages
-				.map((bean)->convertBeanToDto(bean));
+				.map((bean)->convertBeanToDto(bean));		
 	}
 	
 	public EditorialDTO convertBeanToDto(Editorial editorial) {
