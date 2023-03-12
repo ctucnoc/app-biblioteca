@@ -28,10 +28,10 @@ public class AuthorServiceImpl implements AuthorService{
 	}
 	
 	public AuthorDTO convertBeanToDto(Author author) {
-		return AuthorDTO.builder()
-				.id(author.getId())
-				.authorName(author.getName() + " "+author.getLastName())
-				.build();
+		AuthorDTO dto = new AuthorDTO();
+		dto.setId(author.getId());
+		dto.setAuthorName(author.getName().concat(author.getLastName()));
+		return dto;
 	}
 
 	@Override

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.EditorialDTO;
 import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
+import com.pe.crce.biblioteca.mapper.EditorialMapper;
 import com.pe.crce.biblioteca.model.Editorial;
 import com.pe.crce.biblioteca.repository.EditorialRespository;
 import com.pe.crce.biblioteca.service.EditorialService;
@@ -15,10 +16,15 @@ import com.pe.crce.biblioteca.service.EditorialService;
 @Service
 public class EditorialServiceImpl implements EditorialService {
 
+	final
 	EditorialRespository editorialRespository;
-
-	public EditorialServiceImpl(EditorialRespository editorialRespository) {
+	
+	final
+	EditorialMapper editorialMapper;
+	
+	public EditorialServiceImpl(EditorialRespository editorialRespository,EditorialMapper editorialMapper) {
 		this.editorialRespository = editorialRespository;
+		this.editorialMapper = editorialMapper;
 	}
 
 	@Override
@@ -62,14 +68,14 @@ public class EditorialServiceImpl implements EditorialService {
 	public Page<EditorialDTO> findByNameLike(String name,Pageable pageable) {
 		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%"+name+"%", BibliotecaConstant.STATE_ACTIVE,pageable);
 		return editorialPages
-				.map((bean)->convertBeanToDto(bean));		
+				.map((bean)-> editorialMapper.toDto(bean));		
 	}
 	
 	public EditorialDTO convertBeanToDto(Editorial editorial) {
-		return EditorialDTO.builder()
-				.id(editorial.getId())
-				.name(editorial.getName())
-				.build();
+		EditorialDTO dto = new EditorialDTO();
+		dto.setId(editorial.getId());
+		dto.setName(editorial.getName());
+		return dto;
 	}
 
 }
