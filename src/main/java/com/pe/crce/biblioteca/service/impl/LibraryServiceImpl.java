@@ -27,8 +27,12 @@ public class LibraryServiceImpl implements LibraryService {
 	}
 
 	public LibraryDTO convertBeanToDto(Library library) {
-		return LibraryDTO.builder().id(library.getId()).name(library.getName()).description(library.getDescription())
-				.address(library.getAddress()).build();
+		LibraryDTO dto = new LibraryDTO();
+		dto.setId(library.getId());
+		dto.setName(library.getName());
+		dto.setAddress(library.getAddress());
+		dto.setDescription(library.getDescription());
+		return dto;
 	}
 
 }

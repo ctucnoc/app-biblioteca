@@ -1,7 +1,6 @@
 package com.pe.crce.biblioteca.controller;
 
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -16,11 +15,8 @@ import com.pe.crce.biblioteca.dto.PageableDTO;
 import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
 import com.pe.crce.biblioteca.service.EditorialService;
 import com.pe.crce.biblioteca.util.BibliotecaUtil;
-
-import lombok.extern.slf4j.Slf4j;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 
-@Slf4j
 @RestController
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
 @CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
@@ -39,7 +35,6 @@ public class EditorialController {
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
 	public Page<EditorialDTO> findByName(@RequestParam String name,PageableDTO pageable){
-		log.info("crce EditorialController -> {} "+pageable);
 		return this.editorialService.findByNameLike(name,this.util.getPageable(pageable));
 	}
 	

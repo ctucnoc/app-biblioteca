@@ -72,10 +72,10 @@ public class EditorialServiceImpl implements EditorialService {
 	}
 	
 	public EditorialDTO convertBeanToDto(Editorial editorial) {
-		return EditorialDTO.builder()
-				.id(editorial.getId())
-				.name(editorial.getName())
-				.build();
+		EditorialDTO dto = new EditorialDTO();
+		dto.setId(editorial.getId());
+		dto.setName(editorial.getName());
+		return dto;
 	}
 
 }
