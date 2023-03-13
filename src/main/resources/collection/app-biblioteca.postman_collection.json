@@ -9,11 +9,46 @@
 			"name": "editorial",
 			"item": [
 				{
-					"name": "findAll",
+					"name": "findByName",
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial"
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/editorials/editorial?name=&page=0&size=8&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"editorials",
+								"editorial"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
 					},
 					"response": []
 				},
@@ -73,7 +108,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=pabli",
+							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -88,7 +123,7 @@
 							"query": [
 								{
 									"key": "key_word",
-									"value": "pabli"
+									"value": ""
 								}
 							]
 						}
@@ -110,6 +145,59 @@
 							}
 						},
 						"url": "http://localhost:9090/v1/app-biblioteca/authors/author"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "library",
+			"item": [
+				{
+					"name": "findByNameLike",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/libraries/library?key_word=bibl",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"libraries",
+								"library"
+							],
+							"query": [
+								{
+									"key": "key_word",
+									"value": "bibl"
+								},
+								{
+									"key": "page",
+									"value": "1",
+									"disabled": true
+								},
+								{
+									"key": "size",
+									"value": "5",
+									"disabled": true
+								},
+								{
+									"key": "field",
+									"value": "id",
+									"disabled": true
+								},
+								{
+									"key": "order",
+									"value": "0",
+									"disabled": true
+								}
+							]
+						}
 					},
 					"response": []
 				}
