@@ -1,6 +1,8 @@
+## CONFIGURACIÓN DEL PUERTO
 server:
   port: 9090
-  
+
+## CONFIGURACIÓN DE DATASOURCE
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
@@ -12,7 +14,18 @@ spring:
     show-sql: true
     hibernate:
       ddl-auto: none
-
+      
+  application:
+    name: '@project.artifactId@'
+  jmx:
+    default-domain: ${spring.application.name}
+    
+  output:
+    ansi:
+      enabled: detect
+    
+    
+# CONFIGURACIÓN DE LA DOCUMENTACIÓN DE LAS APIS
 springdoc:
   swagger-ui:
       enabled: true
@@ -22,3 +35,4 @@ springdoc:
     path: /api-docs
   packages-to-scan:
   - com.pe.crce.biblioteca.controller
+   

@@ -13,6 +13,12 @@
 	<version>0.0.1-SNAPSHOT</version>
 	<name>app-biblioteca</name>
 	<description>Demo project for Spring Boot</description>
+	<developers>
+		<developer>
+			<name>Cristian Tucno Conde</name>
+			<organization>Digital Corp Perú SAC</organization>
+		</developer>
+	</developers>
 	<properties>
 		<java.version>11</java.version>
 		<org.mapstruct.version>1.5.3.Final</org.mapstruct.version>

@@ -1,0 +1,45 @@
+2023-03-15 12:23:59,547 INFO [restartedMain] org.springframework.boot.StartupInfoLogger : Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 25480 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+2023-03-15 12:23:59,549 INFO [restartedMain] org.springframework.boot.SpringApplication : The following 1 profile is active: "dev"
+2023-03-15 12:23:59,589 INFO [restartedMain] org.springframework.boot.logging.DeferredLog : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2023-03-15 12:23:59,589 INFO [restartedMain] org.springframework.boot.logging.DeferredLog : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2023-03-15 12:24:00,170 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-03-15 12:24:00,171 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JDBC repositories in DEFAULT mode.
+2023-03-15 12:24:00,199 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.pe.crce.biblioteca.repository.AuthorRepository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-03-15 12:24:00,201 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.pe.crce.biblioteca.repository.EditorialRespository; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-03-15 12:24:00,203 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationExtensionSupport : Spring Data JDBC - Could not safely identify store assignment for repository candidate interface com.pe.crce.biblioteca.repository.LibraryRepositorio; If you want this repository to be a JDBC repository, consider annotating your entities with one of these annotations: org.springframework.data.relational.core.mapping.Table.
+2023-03-15 12:24:00,204 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 0 JDBC repository interfaces.
+2023-03-15 12:24:00,210 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2023-03-15 12:24:00,211 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-03-15 12:24:00,245 INFO [restartedMain] org.springframework.data.repository.config.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 28 ms. Found 3 JPA repository interfaces.
+2023-03-15 12:24:00,707 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat initialized with port(s): 9090 (http)
+2023-03-15 12:24:00,716 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog : Initializing ProtocolHandler ["http-nio-9090"]
+2023-03-15 12:24:00,716 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog : Starting service [Tomcat]
+2023-03-15 12:24:00,716 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog : Starting Servlet engine: [Apache Tomcat/9.0.71]
+2023-03-15 12:24:00,775 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog : Initializing Spring embedded WebApplicationContext
+2023-03-15 12:24:00,775 INFO [restartedMain] org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1185 ms
+2023-03-15 12:24:00,912 INFO [restartedMain] org.hibernate.jpa.internal.util.LogHelper : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-03-15 12:24:00,946 INFO [restartedMain] org.hibernate.Version : HHH000412: Hibernate ORM core version 5.6.15.Final
+2023-03-15 12:24:01,064 INFO [restartedMain] org.hibernate.annotations.common.reflection.java.JavaReflectionManager : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-03-15 12:24:01,132 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Starting...
+2023-03-15 12:24:01,385 INFO [restartedMain] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Start completed.
+2023-03-15 12:24:01,408 INFO [restartedMain] org.hibernate.dialect.Dialect : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+2023-03-15 12:24:01,823 INFO [restartedMain] org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-03-15 12:24:01,832 INFO [restartedMain] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-03-15 12:24:02,331 WARN [restartedMain] org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-03-15 12:24:02,921 INFO [restartedMain] org.springframework.boot.devtools.autoconfigure.OptionalLiveReloadServer : LiveReload server is running on port 35729
+2023-03-15 12:24:02,938 INFO [restartedMain] org.apache.juli.logging.DirectJDKLog : Starting ProtocolHandler ["http-nio-9090"]
+2023-03-15 12:24:02,959 INFO [restartedMain] org.springframework.boot.web.embedded.tomcat.TomcatWebServer : Tomcat started on port(s): 9090 (http) with context path ''
+2023-03-15 12:24:02,968 INFO [restartedMain] org.springframework.boot.StartupInfoLogger : Started AppBibliotecaApplication in 3.787 seconds (JVM running for 4.418)
+2023-03-15 12:24:28,180 INFO [http-nio-9090-exec-4] org.apache.juli.logging.DirectJDKLog : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-03-15 12:24:28,180 INFO [http-nio-9090-exec-4] org.springframework.web.servlet.FrameworkServlet : Initializing Servlet 'dispatcherServlet'
+2023-03-15 12:24:28,181 INFO [http-nio-9090-exec-4] org.springframework.web.servlet.FrameworkServlet : Completed initialization in 1 ms
+2023-03-15 12:24:28,218 INFO [http-nio-9090-exec-4] com.pe.crce.biblioteca.controller.EditorialController : TE AMO CELIA... PageableDTO(page=0, size=8, order=Optional[1], field=Optional[id])
+2023-03-15 12:25:39,365 INFO [RMI TCP Connection(10)-127.0.0.1] org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin : Application shutdown requested.
+2023-03-15 12:25:39,374 INFO [RMI TCP Connection(10)-127.0.0.1] org.apache.juli.logging.DirectJDKLog : Pausing ProtocolHandler ["http-nio-9090"]
+2023-03-15 12:25:39,375 INFO [RMI TCP Connection(10)-127.0.0.1] org.apache.juli.logging.DirectJDKLog : Stopping service [Tomcat]
+2023-03-15 12:25:39,377 INFO [RMI TCP Connection(10)-127.0.0.1] org.apache.juli.logging.DirectJDKLog : Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-03-15 12:25:39,381 INFO [RMI TCP Connection(10)-127.0.0.1] org.apache.juli.logging.DirectJDKLog : Stopping ProtocolHandler ["http-nio-9090"]
+2023-03-15 12:25:39,384 INFO [RMI TCP Connection(10)-127.0.0.1] org.apache.juli.logging.DirectJDKLog : Destroying ProtocolHandler ["http-nio-9090"]
+2023-03-15 12:25:39,387 INFO [RMI TCP Connection(10)-127.0.0.1] org.springframework.orm.jpa.AbstractEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-03-15 12:25:39,390 INFO [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown initiated...
+2023-03-15 12:25:39,392 INFO [RMI TCP Connection(10)-127.0.0.1] com.zaxxer.hikari.HikariDataSource : HikariPool-1 - Shutdown completed.

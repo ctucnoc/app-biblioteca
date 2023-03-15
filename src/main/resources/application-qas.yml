@@ -1,2 +1,50 @@
+## CONFIGURACIÓN DEL PUERTO
 server:
   port: 9091
+
+## CONFIGURACIÓN DE DATASOURCE
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5454/db_biblioteca?useSSL=false
+    username: biblioteca
+    password: biblioteca
+    
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: none
+      
+  application:
+    name: '@project.artifactId@'
+  jmx:
+    default-domain: ${spring.application.name}
+    
+  output:
+    ansi:
+      enabled: detect
+    
+    
+# CONFIGURACIÓN DE LA DOCUMENTACIÓN DE LAS APIS
+springdoc:
+  swagger-ui:
+      enabled: true
+      path: /swagger-ui.html
+  api-docs:
+    enabled: true
+    path: /api-docs
+  packages-to-scan:
+  - com.pe.crce.biblioteca.controller
+
+## CONFIGURACION DEL LOG
+logging: 
+  level:
+   root: info
+   '[org.springframework.web]': INFO
+  pattern:
+    ##console: "%d{yyyy-MM-dd HH:mm:ss} - [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n"
+  file: 
+    name: logs/${spring.application.name}.log
+    max-size:
+      negative: 10MB
