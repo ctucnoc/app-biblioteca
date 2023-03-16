@@ -11,4 +11,22 @@ public interface LibraryRepositorio extends JpaRepository<Library, Long> {
 
 	@Query("select li from Library li where LOWER(li.name) like CONCAT('%',LOWER(?1),'%') and li.state = ?2")
 	public List<Library> findByNameLikeJPA(String key_word, String state);
+
+	// =============================================================================================
+	// PRIMERA FORMA .- POR NOMBRE DE METODO
+	// =============================================================================================
+	public List<Library> findByDescriptionContainingOrderByIdAsc(String description);
+
+	// =============================================================================================
+	// SEGUNDA FORMA .- MEDIANTE JPQL
+	// =============================================================================================
+	@Query("select l from Library l where id =?1")
+	public Library findByIdJPSQL(Long id);
+
+	// =============================================================================================
+	// TERCERA FORMA .- MEDIANTE INSTRUCCION SQL
+	// =============================================================================================
+	@Query(value = "select count(*)>0 from dbo.t_library where idlibrary = ?1", nativeQuery = true)
+	public Boolean existsByidSQL(Long id);
+
 }
