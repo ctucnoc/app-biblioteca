@@ -1,7 +1,7 @@
 package com.pe.crce.biblioteca.service.impl;
 
-import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -37,24 +37,15 @@ public class EditorialServiceImpl implements EditorialService {
 
 	@Override
 	public EditorialDTO findById(Long id) {
-		Editorial editorial = this.editorialRespository.findById(id).get();
-		EditorialDTO dto = new EditorialDTO();
-		dto.setId(editorial.getId());
-		dto.setName(editorial.getName());
-		return dto;
+		return editorialMapper.toDto(this.editorialRespository.findById(id).get());
 	}
 
 	@Override
 	public List<EditorialDTO> findaLL() {
 		List<Editorial> list = this.editorialRespository.findAll();
-		List<EditorialDTO> listDtos = new ArrayList<>();
-		list.forEach((bean) -> {
-			EditorialDTO dto = new EditorialDTO();
-			dto.setId(bean.getId());
-			dto.setName(bean.getName());
-			listDtos.add(dto);
-		});
-		return listDtos;
+		return list.stream()
+				.map((bean)->editorialMapper.toDto(bean))
+				.collect(Collectors.toList());
 	}
 
 	@Override
@@ -69,13 +60,6 @@ public class EditorialServiceImpl implements EditorialService {
 		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%"+name+"%", BibliotecaConstant.STATE_ACTIVE,pageable);
 		return editorialPages
 				.map((bean)->editorialMapper.toDto(bean));		
-	}
-	
-	public EditorialDTO convertBeanToDto(Editorial editorial) {
-		EditorialDTO dto = new EditorialDTO();
-		dto.setId(editorial.getId());
-		dto.setName(editorial.getName());
-		return dto;
 	}
 
 }

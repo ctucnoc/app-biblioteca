@@ -18,8 +18,7 @@ public class AuthorServiceImpl implements AuthorService{
 	
 	final
 	AuthorMapper authorMapper;
-	
-	
+		
 	public AuthorServiceImpl(AuthorRepository authorRepository,AuthorMapper authorMapper) {
 		this.authorRepository = authorRepository;
 		this.authorMapper = authorMapper;
@@ -32,17 +31,10 @@ public class AuthorServiceImpl implements AuthorService{
 				.map((bean)->authorMapper.toDto(bean))
 				.collect(Collectors.toList());
 	}
-	
-	public AuthorDTO convertBeanToDto(Author author) {
-		return AuthorDTO.builder()
-				.id(author.getId())
-				.authorName(author.getName().concat(" ").concat(author.getLastName()))
-				.build();
-	}
 
 	@Override
 	public AuthorDTO saveSQL(AuthorDTORequest dto) {
-		return convertBeanToDto(this.authorRepository.saveSQL(dto.getName(), dto.getLastName()));
+		return authorMapper.toDto(this.authorRepository.saveSQL(dto.getName(), dto.getLastName()));
 	}
 	
 }

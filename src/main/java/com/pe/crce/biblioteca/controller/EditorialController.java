@@ -1,6 +1,8 @@
 package com.pe.crce.biblioteca.controller;
 
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,24 +40,24 @@ public class EditorialController {
 	}
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
-	public Page<EditorialDTO> findByName(@RequestParam String name,PageableDTO pageable){
+	public ResponseEntity<Page<EditorialDTO>> findByName(@RequestParam String name,PageableDTO pageable){
 		log.info("controller -> {} "+pageable.toString());
-		return this.editorialService.findByNameLike(name,this.util.getPageable(pageable));
+		return new ResponseEntity<Page<EditorialDTO>>(this.editorialService.findByNameLike(name,this.util.getPageable(pageable)), HttpStatus.OK);
 	}
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL + BibliotecaConstant.RESOURCE_GENERIC_ID)
-	public EditorialDTO findById(@PathVariable Long id) {
-		return this.editorialService.findById(id);
+	public ResponseEntity<EditorialDTO> findById(@PathVariable Long id) {
+		return new ResponseEntity<EditorialDTO>(this.editorialService.findById(id), HttpStatus.OK);
 	}	
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
-	public Long save(@RequestBody EditorialDTORequest dto) {
-		return this.editorialService.save(dto);
+	public ResponseEntity<Long> save(@RequestBody EditorialDTORequest dto) {
+		return new ResponseEntity<Long>(this.editorialService.save(dto), HttpStatus.CREATED);
 	}
 	
 	@PutMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL + BibliotecaConstant.RESOURCE_GENERIC_ID)
-	public Long update(@RequestBody EditorialDTORequest dto,@PathVariable Long id) {
-		return this.editorialService.update(dto, id);
+	public ResponseEntity<Long> update(@RequestBody EditorialDTORequest dto,@PathVariable Long id) {
+		return new ResponseEntity<Long>(this.editorialService.update(dto, id), HttpStatus.OK);
 	}
 
 	

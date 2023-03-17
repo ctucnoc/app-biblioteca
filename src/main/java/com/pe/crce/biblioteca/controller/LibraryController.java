@@ -1,6 +1,8 @@
 package com.pe.crce.biblioteca.controller;
 
 import java.util.List;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -19,13 +21,12 @@ public class LibraryController {
 	LibraryService libraryService;
 	
 	public LibraryController(LibraryService libraryService) {
-		super();
 		this.libraryService = libraryService;
 	}
 
 	@GetMapping(BibliotecaConstant.RESOURCE_LIBRARYS + BibliotecaConstant.RESOURCE_LIBRARYS_LIBRARY)
-	public List<LibraryDTO> findByNameLikeJPA(@RequestParam String key_word) {
-		return this.libraryService.findByNameLikeJPA(key_word);
+	public ResponseEntity<List<LibraryDTO>> findByNameLikeJPA(@RequestParam String key_word) {
+		return new ResponseEntity<List<LibraryDTO>>(this.libraryService.findByNameLikeJPA(key_word), HttpStatus.OK);
 	}
 
 }
