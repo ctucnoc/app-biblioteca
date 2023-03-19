@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.EditorialDTO;
 import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
+import com.pe.crce.biblioteca.errorhandler.EntityNotFoundException;
 import com.pe.crce.biblioteca.mapper.EditorialMapper;
 import com.pe.crce.biblioteca.model.Editorial;
 import com.pe.crce.biblioteca.repository.EditorialRespository;
@@ -37,7 +38,9 @@ public class EditorialServiceImpl implements EditorialService {
 
 	@Override
 	public EditorialDTO findById(Long id) {
-		return editorialMapper.toDto(this.editorialRespository.findById(id).get());
+		Editorial editorial = this.editorialRespository.findById(id)
+				.orElseThrow(()-> new EntityNotFoundException(String.format("La editorial con id %s no existe", id.toString())));
+		return editorialMapper.toDto(editorial);
 	}
 
 	@Override

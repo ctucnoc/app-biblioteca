@@ -1,5 +1,7 @@
 package com.pe.crce.biblioteca.controller;
 
+import javax.validation.Valid;
+
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -51,7 +53,7 @@ public class EditorialController {
 	}	
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
-	public ResponseEntity<Long> save(@RequestBody EditorialDTORequest dto) {
+	public ResponseEntity<Long> save(@RequestBody @Valid EditorialDTORequest dto) {
 		return new ResponseEntity<Long>(this.editorialService.save(dto), HttpStatus.CREATED);
 	}
 	
