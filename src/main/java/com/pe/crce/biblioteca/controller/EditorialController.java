@@ -15,6 +15,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.pe.crce.biblioteca.dto.EditorialDTO;
+import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.PageableDTO;
 import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
 import com.pe.crce.biblioteca.service.EditorialService;
@@ -53,13 +54,13 @@ public class EditorialController {
 	}	
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
-	public ResponseEntity<Long> save(@RequestBody @Valid EditorialDTORequest dto) {
-		return new ResponseEntity<Long>(this.editorialService.save(dto), HttpStatus.CREATED);
+	public ResponseEntity<HrefEntityDTO> save(@RequestBody @Valid EditorialDTORequest dto) {
+		return new ResponseEntity<HrefEntityDTO>(this.editorialService.save(dto), HttpStatus.CREATED);
 	}
 	
 	@PutMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL + BibliotecaConstant.RESOURCE_GENERIC_ID)
-	public ResponseEntity<Long> update(@RequestBody EditorialDTORequest dto,@PathVariable Long id) {
-		return new ResponseEntity<Long>(this.editorialService.update(dto, id), HttpStatus.OK);
+	public ResponseEntity<HrefEntityDTO> update(@RequestBody EditorialDTORequest dto,@PathVariable Long id) {
+		return new ResponseEntity<HrefEntityDTO>(this.editorialService.update(dto, id), HttpStatus.OK);
 	}
 
 	

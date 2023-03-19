@@ -13,6 +13,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.AuthorDTO;
+import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.AuthorDTORequest;
 import com.pe.crce.biblioteca.service.AuthorService;
 
@@ -34,8 +35,8 @@ public class AuthorController {
 	}
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_AUTHORS + BibliotecaConstant.RESOURCE_AUTHORS_AUTHOR)
-	public ResponseEntity<AuthorDTO> saveSQL(@RequestBody AuthorDTORequest dto) {
-		return new ResponseEntity<AuthorDTO>(this.authorService.saveSQL(dto), HttpStatus.CREATED);
+	public ResponseEntity<HrefEntityDTO> saveSQL(@RequestBody AuthorDTORequest dto) {
+		return new ResponseEntity<HrefEntityDTO>(this.authorService.saveSQL(dto), HttpStatus.CREATED);
 	}
 
 }

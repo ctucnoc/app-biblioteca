@@ -6,13 +6,14 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
 import com.pe.crce.biblioteca.dto.EditorialDTO;
+import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
 
 public interface EditorialService {
 
-	public Long save(EditorialDTORequest dto);
+	public HrefEntityDTO save(EditorialDTORequest dto);
 	
-	public Long update(EditorialDTORequest dto,Long id);
+	public HrefEntityDTO update(EditorialDTORequest dto,Long id);
 	
 	public EditorialDTO findById(Long id);
 	
