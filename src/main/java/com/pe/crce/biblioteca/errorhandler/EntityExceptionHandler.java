@@ -52,7 +52,7 @@ public class EntityExceptionHandler extends ResponseEntityExceptionHandler {
 	protected ResponseEntity<Object> handleGenericClientException(EntityGenericClientException ex) {
 		ErrorDTO sysceError = new ErrorDTO(ex.getHttpStatus(), BibliotecaConstant.PREFIX_CLIENT_ERROR);
 		sysceError.setMessage(ex.getMessage());
-		sysceError.setSubErros(ex.getSubErros());
+		sysceError.setSubErrors(ex.getSubErros());
 		return buildResponseEntity(sysceError);
 	}
 
@@ -100,6 +100,16 @@ public class EntityExceptionHandler extends ResponseEntityExceptionHandler {
 
 		return buildResponseEntity(new ErrorDTO(HttpStatus.BAD_REQUEST,
 				BibliotecaConstant.PREFIX_CLIENT_ERROR + BibliotecaConstant.BAD_REQUEST, error, ex));
+	}
+
+	@Override
+	protected ResponseEntity<Object> handleMethodArgumentNotValid(MethodArgumentNotValidException ex,
+			HttpHeaders headers, HttpStatus status, WebRequest request) {
+		ErrorDTO errorDTO = new ErrorDTO(HttpStatus.BAD_REQUEST,
+				BibliotecaConstant.PREFIX_CLIENT_ERROR + BibliotecaConstant.BAD_REQUEST);
+		errorDTO.setMessage(ex.getBindingResult().getFieldError().toString());
+		errorDTO.setSubErrors(fillValidationErrorsFrom(ex));
+		return buildResponseEntity(errorDTO);
 	}
 
 	protected List<SubError> fillValidationErrorsFrom(MethodArgumentNotValidException argumentNotValid) {

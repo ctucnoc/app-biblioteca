@@ -19,7 +19,7 @@ public class ErrorDTO {
 	private Date timestamp;
 	private String message;
 	private String debugMessage;
-	private List<SubError> subErros;
+	private List<SubError> subErrors;
 
 	private ErrorDTO() {
 		timestamp = new Date();
