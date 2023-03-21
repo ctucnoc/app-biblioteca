@@ -1,7 +1,6 @@
 package com.pe.crce.biblioteca.controller;
 
 import java.util.List;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -17,6 +16,9 @@ import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.AuthorDTORequest;
 import com.pe.crce.biblioteca.service.AuthorService;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @RestController
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
 @CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
@@ -36,6 +38,7 @@ public class AuthorController {
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_AUTHORS + BibliotecaConstant.RESOURCE_AUTHORS_AUTHOR)
 	public ResponseEntity<HrefEntityDTO> saveSQL(@RequestBody AuthorDTORequest dto) {
+		log.info("crce controller saveSQL -> {} "+dto.toString());
 		return new ResponseEntity<HrefEntityDTO>(this.authorService.saveSQL(dto), HttpStatus.CREATED);
 	}
 
