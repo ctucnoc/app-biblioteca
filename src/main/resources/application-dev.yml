@@ -49,5 +49,11 @@ logging:
       negative: 10MB
     total-size-cap:
       negative: 100MB
+      
+## CORS ORIGIN
+cors:
+  mapping: "/**"
+  allowed-origins: http://localhost:4200, http://localhost:80
+  allowed-methods: GET, POST, PATCH, PUT, DELETE, POTIONS, HEAD
   
    
