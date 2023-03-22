@@ -1,12 +1,9 @@
 package com.pe.crce.biblioteca.controller;
 
 import java.util.List;
-
 import javax.validation.Valid;
-
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -18,13 +15,11 @@ import com.pe.crce.biblioteca.dto.AuthorDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.AuthorDTORequest;
 import com.pe.crce.biblioteca.service.AuthorService;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
 @RestController
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
-@CrossOrigin(BibliotecaConstant.CLIENT_FRONTEND)
 public class AuthorController {
 
 	final 
