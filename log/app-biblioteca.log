@@ -1,327 +1,510 @@
-12:06:26.835 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 17336 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:06:26.840 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:06:26.958 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-12:06:26.959 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-12:06:28.606 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:06:28.728 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 102 ms. Found 4 JPA repository interfaces.
-12:06:29.657 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:06:29.678 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:06:29.679 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:06:29.812 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:06:29.812 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2851 ms
-12:06:30.026 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:06:30.137 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-12:06:30.459 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-12:06:30.664 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-12:06:31.095 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-12:06:31.152 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:06:32.148 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:06:32.166 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:06:33.099 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:06:33.990 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:06:34.051 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:06:34.063 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 7.913 seconds (JVM running for 9.616)
-12:06:55.414 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-12:06:55.415 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-12:06:55.418 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 3 ms
-12:06:55.506 [http-nio-9090-exec-2] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
-12:07:37.041 [http-nio-9090-exec-3] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
-12:08:14.937 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:08:14.955 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:08:14.967 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
-12:08:14.978 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:08:14.982 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-12:08:14.996 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-12:08:15.101 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 17336 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:08:15.101 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:08:15.436 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:08:15.464 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
-12:08:15.609 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:08:15.610 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:08:15.610 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:08:15.639 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:08:15.639 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 533 ms
-12:08:15.694 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:08:15.700 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-12:08:15.777 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-12:08:15.778 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:08:15.858 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:08:15.858 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:08:16.135 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:08:16.532 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:08:16.549 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:08:16.555 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.495 seconds (JVM running for 112.108)
-12:08:16.558 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-12:08:21.685 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-12:08:21.685 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-12:08:21.687 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
-12:08:21.718 [http-nio-9090-exec-1] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
-12:08:53.742 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:08:53.753 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:08:53.754 [Thread-7] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
-12:08:53.761 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:08:53.762 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-12:08:53.764 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-12:08:53.868 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 17336 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:08:53.868 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:08:54.131 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:08:54.156 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 4 JPA repository interfaces.
-12:08:54.271 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:08:54.273 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:08:54.274 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:08:54.300 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:08:54.301 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 431 ms
-12:08:54.359 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:08:54.366 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-12:08:54.453 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-12:08:54.454 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:08:54.525 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:08:54.525 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:08:54.759 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:08:55.248 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:08:55.266 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:08:55.271 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.442 seconds (JVM running for 150.825)
-12:08:55.274 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-12:09:03.836 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:09:03.846 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:09:03.852 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:09:03.853 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-12:09:03.858 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-12:09:03.950 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 17336 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:09:03.950 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:09:04.267 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:09:04.299 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 31 ms. Found 4 JPA repository interfaces.
-12:09:04.427 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:09:04.428 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:09:04.428 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:09:04.466 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:09:04.466 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 513 ms
-12:09:04.507 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:09:04.512 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
-12:09:04.589 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
-12:09:04.589 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:09:04.678 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:09:04.678 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:09:04.945 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:09:05.392 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:09:05.414 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:09:05.422 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.511 seconds (JVM running for 160.975)
-12:09:05.426 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-12:10:42.898 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
-12:10:42.912 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:10:42.919 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:10:42.920 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
-12:10:42.922 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
-12:10:43.010 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 17336 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:10:43.010 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:10:43.267 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:10:43.293 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 25 ms. Found 4 JPA repository interfaces.
-12:10:43.406 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:10:43.407 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:10:43.407 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:10:43.433 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:10:43.433 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 421 ms
-12:10:43.471 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:10:43.476 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
-12:10:43.549 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
-12:10:43.550 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:10:43.607 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:10:43.608 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:10:43.862 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:10:44.263 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:10:44.276 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:10:44.281 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.305 seconds (JVM running for 259.834)
-12:10:44.283 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-12:15:30.336 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:15:30.345 [Thread-19] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:15:30.350 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:15:30.351 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
-12:15:30.364 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
-12:15:30.472 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 17336 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:15:30.472 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:15:30.753 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:15:30.782 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 28 ms. Found 4 JPA repository interfaces.
-12:15:30.894 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:15:30.895 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:15:30.896 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:15:30.931 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:15:30.931 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 457 ms
-12:15:30.965 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:15:30.969 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
-12:15:31.050 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
-12:15:31.050 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:15:31.107 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:15:31.107 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:15:31.333 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:15:31.583 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:15:31.602 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:15:31.606 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.175 seconds (JVM running for 547.159)
-12:15:31.611 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation delta:
+11:53:49.892 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - Starting AppBibliotecaApplicationTests using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 6792 (started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+11:53:49.897 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - The following 1 profile is active: "dev"
+11:53:50.974 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+11:53:51.077 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 90 ms. Found 5 JPA repository interfaces.
+11:53:51.663 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+11:53:51.748 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+11:53:51.949 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+11:53:52.188 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+11:53:52.452 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+11:53:52.497 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+11:53:53.297 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+11:53:53.312 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+11:53:54.199 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+11:53:55.580 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - Started AppBibliotecaApplicationTests in 6.086 seconds (JVM running for 7.114)
+11:53:55.824 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+11:53:55.827 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+11:53:55.831 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:03:38.732 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:03:38.734 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:03:38.770 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+12:03:38.770 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+12:03:39.337 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:03:39.396 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 51 ms. Found 5 JPA repository interfaces.
+12:03:39.902 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:03:39.914 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:03:39.914 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:03:39.989 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:03:39.989 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1219 ms
+12:03:40.118 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:03:40.193 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+12:03:40.380 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:03:40.503 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:03:40.658 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:03:40.691 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:03:41.285 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:03:41.294 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:03:41.824 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:03:42.334 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:03:42.382 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:03:42.392 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 3.982 seconds (JVM running for 4.667)
+12:05:04.527 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+12:05:04.538 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:05:04.547 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:05:04.550 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:05:04.552 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:05:04.616 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:05:04.616 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:05:04.855 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:05:04.891 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 36 ms. Found 5 JPA repository interfaces.
+12:05:05.013 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:05:05.014 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:05:05.014 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:05:05.034 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:05:05.034 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 417 ms
+12:05:05.068 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:05:05.073 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+12:05:05.234 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+12:05:05.235 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:05:05.306 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:05:05.307 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:05:05.508 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:05:05.701 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:05:05.718 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:05:05.722 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.132 seconds (JVM running for 87.997)
+12:05:05.725 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:05:24.046 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:05:24.046 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:05:24.047 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:05:24.061 [http-nio-9090-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /v1/app-biblioteca/sub-areas/sub-area/1
+12:06:04.152 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:06:04.160 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:06:04.160 [Thread-7] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+12:06:04.164 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:06:04.165 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+12:06:04.166 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+12:06:04.226 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:06:04.226 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:06:04.365 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:06:04.382 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 5 JPA repository interfaces.
+12:06:04.447 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:06:04.448 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:06:04.448 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:06:04.463 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:06:04.463 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 236 ms
+12:06:04.488 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:06:04.491 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+12:06:04.540 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+12:06:04.540 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:06:04.585 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:06:04.585 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:06:04.729 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:06:04.922 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:06:04.937 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:06:04.941 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.735 seconds (JVM running for 147.215)
+12:06:04.942 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:06:10.125 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:06:10.125 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:06:10.126 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:06:10.131 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+12:10:21.519 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 100
+12:11:26.242 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:11:26.250 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:11:26.250 [Thread-11] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+12:11:26.253 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:11:26.254 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+12:11:26.255 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+12:11:26.317 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:11:26.317 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:11:26.452 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:11:26.469 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+12:11:26.547 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:11:26.548 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:11:26.548 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:11:26.562 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:11:26.562 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 243 ms
+12:11:26.585 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:11:26.588 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
+12:11:26.634 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
+12:11:26.634 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:11:26.672 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:11:26.673 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:11:26.831 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:11:27.037 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:11:27.050 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:11:27.054 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.757 seconds (JVM running for 469.328)
+12:11:27.055 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:12:44.837 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+12:12:44.846 [Thread-15] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:12:44.850 [Thread-15] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:12:44.850 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown initiated...
+12:12:44.852 [Thread-15] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Shutdown completed.
+12:12:44.908 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:12:44.908 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:12:45.035 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:12:45.055 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20 ms. Found 5 JPA repository interfaces.
+12:12:45.114 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:12:45.115 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:12:45.115 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:12:45.128 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:12:45.128 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 219 ms
+12:12:45.153 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:12:45.156 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Starting...
+12:12:45.305 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Start completed.
+12:12:45.305 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:12:45.338 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:12:45.339 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:12:45.481 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:12:45.649 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:12:45.659 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:12:45.662 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.773 seconds (JVM running for 547.937)
+12:12:45.664 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:15:48.362 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (1 addition, 0 deletions, 1 modification)
+12:15:48.370 [Thread-19] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:15:48.374 [Thread-19] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:15:48.374 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown initiated...
+12:15:48.375 [Thread-19] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-5 - Shutdown completed.
+12:15:48.429 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:15:48.429 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:15:48.546 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:15:48.561 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 15 ms. Found 5 JPA repository interfaces.
+12:15:48.621 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:15:48.621 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:15:48.621 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:15:48.638 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:15:48.638 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 208 ms
+12:15:48.660 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:15:48.663 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Starting...
+12:15:48.708 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Start completed.
+12:15:48.708 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:15:48.742 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:15:48.742 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:15:48.894 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:15:49.065 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:15:49.075 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:15:49.080 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.668 seconds (JVM running for 731.355)
+12:15:49.082 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:16:32.228 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+12:16:32.236 [Thread-23] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:16:32.240 [Thread-23] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:16:32.240 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
+12:16:32.241 [Thread-23] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
+12:16:32.295 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:16:32.295 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:16:32.414 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:16:32.428 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:16:32.484 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:16:32.484 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:16:32.485 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:16:32.498 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:16:32.498 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 202 ms
+12:16:32.522 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:16:32.524 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Starting...
+12:16:32.571 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Start completed.
+12:16:32.571 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:16:32.603 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:16:32.603 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:16:32.750 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:16:32.916 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:16:32.927 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:16:32.930 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.652 seconds (JVM running for 775.205)
+12:16:32.932 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:21:59.683 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:21:59.693 [Thread-27] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:21:59.697 [Thread-27] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:21:59.697 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown initiated...
+12:21:59.699 [Thread-27] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-7 - Shutdown completed.
+12:21:59.755 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:21:59.755 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:21:59.878 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:21:59.895 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 5 JPA repository interfaces.
+12:21:59.970 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:21:59.971 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:21:59.971 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:21:59.983 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:21:59.983 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 226 ms
+12:22:00.004 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:22:00.006 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Starting...
+12:22:00.051 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Start completed.
+12:22:00.051 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:22:00.081 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:22:00.081 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:22:00.224 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:22:00.381 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:22:00.392 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:22:00.395 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.659 seconds (JVM running for 1102.67)
+12:22:00.396 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:22:50.675 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:22:50.682 [Thread-31] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:22:50.685 [Thread-31] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:22:50.686 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown initiated...
+12:22:50.687 [Thread-31] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-8 - Shutdown completed.
+12:22:50.739 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:22:50.739 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:22:50.861 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:22:50.876 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:22:50.946 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:22:50.947 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:22:50.947 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:22:50.962 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:22:50.963 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 222 ms
+12:22:50.986 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:22:50.988 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Starting...
+12:22:51.032 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Start completed.
+12:22:51.032 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:22:51.060 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:22:51.060 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:22:51.193 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:22:51.199 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'subAreaController' method 
+com.pe.crce.biblioteca.controller.SubAreaController#save(SubAreaDTORequest)
+to {POST [/v1/app-biblioteca/editorials/editorial]}: There is already 'editorialController' bean method
+com.pe.crce.biblioteca.controller.EditorialController#save(EditorialDTORequest) mapped.
+12:22:51.199 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:22:51.199 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown initiated...
+12:22:51.324 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-9 - Shutdown completed.
+12:22:51.325 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:22:51.330 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
-
-==========================
-CONDITION EVALUATION DELTA
-==========================
-
-
-Positive matches:
------------------
-
-    None
-
-
-Negative matches:
------------------
-
-   WebMvcAutoConfiguration:
-      Did not match:
-         - @ConditionalOnMissingBean (types: org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport; SearchStrategy: all) found beans of type 'org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport' org.springframework.web.servlet.config.annotation.DelegatingWebMvcConfiguration (OnBeanCondition)
-      Matched:
-         - @ConditionalOnClass found required classes 'javax.servlet.Servlet', 'org.springframework.web.servlet.DispatcherServlet', 'org.springframework.web.servlet.config.annotation.WebMvcConfigurer' (OnClassCondition)
-         - found 'session' scope (OnWebApplicationCondition)
-
-   WebMvcAutoConfiguration.ResourceChainCustomizerConfiguration:
-      Did not match:
-         - Ancestor org.springframework.boot.autoconfigure.web.servlet.WebMvcAutoConfiguration did not match (ConditionEvaluationReport.AncestorsMatchedCondition)
-      Matched:
-         - @ConditionalOnEnabledResourceChain found class org.webjars.WebJarAssetLocator (OnEnabledResourceChainCondition)
-
-
-Exclusions:
------------
-
-    None
-
-
-Unconditional classes:
-----------------------
-
-    None
-
-
-
-12:15:37.185 [RMI TCP Connection(27)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
-12:15:37.195 [RMI TCP Connection(27)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:15:37.202 [RMI TCP Connection(27)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:15:37.202 [RMI TCP Connection(27)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown initiated...
-12:15:37.204 [RMI TCP Connection(27)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-6 - Shutdown completed.
-12:16:11.474 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - Starting AppBibliotecaApplicationTests using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 18600 (started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:16:11.476 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - The following 1 profile is active: "dev"
-12:16:12.945 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:16:13.076 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 116 ms. Found 4 JPA repository interfaces.
-12:16:13.890 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:16:14.002 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-12:16:14.305 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-12:16:14.635 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-12:16:14.944 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-12:16:15.003 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:16:15.967 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:16:15.980 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:16:17.128 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:16:18.857 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - Started AppBibliotecaApplicationTests in 7.877 seconds (JVM running for 9.256)
-12:16:19.181 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:16:19.186 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-12:16:19.200 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-12:16:28.778 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 8604 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:16:28.780 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:16:28.840 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-12:16:28.840 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-12:16:29.771 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:16:29.890 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 104 ms. Found 4 JPA repository interfaces.
-12:16:30.668 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:16:30.679 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:16:30.680 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:16:30.781 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:16:30.781 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1940 ms
-12:16:30.958 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:16:31.010 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-12:16:31.166 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-12:16:31.276 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-12:16:31.483 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-12:16:31.520 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:16:32.251 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:16:32.260 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:16:32.940 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:16:33.591 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:16:33.666 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:16:33.678 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 5.486 seconds (JVM running for 6.612)
-12:16:53.796 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-12:16:53.796 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-12:16:53.798 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-12:16:53.897 [http-nio-9090-exec-1] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
-12:33:33.080 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:33:33.138 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:33:33.147 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
-12:33:33.190 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:33:33.210 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-12:33:33.223 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-12:33:33.448 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 8604 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:33:33.448 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:33:34.116 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:33:34.180 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 63 ms. Found 4 JPA repository interfaces.
-12:33:34.463 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:33:34.464 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:33:34.465 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:33:34.508 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:33:34.509 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1055 ms
-12:33:34.591 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:33:34.602 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
-12:33:34.806 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
-12:33:34.807 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:33:34.921 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:33:34.922 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:33:35.364 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:33:35.933 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:33:35.968 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:33:35.976 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 2.601 seconds (JVM running for 1028.91)
-12:33:35.981 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-12:33:47.457 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:33:47.474 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:33:47.484 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:33:47.485 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
-12:33:47.489 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
-12:33:47.627 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 8604 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:33:47.627 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:33:48.045 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:33:48.094 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 4 JPA repository interfaces.
-12:33:48.270 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:33:48.276 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:33:48.277 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:33:48.325 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:33:48.326 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 697 ms
-12:33:48.394 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:33:48.399 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
-12:33:48.595 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
-12:33:48.596 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:33:48.690 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:33:48.690 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:33:49.119 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:33:49.590 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:33:49.625 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:33:49.638 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 2.076 seconds (JVM running for 1042.572)
-12:33:49.646 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
-12:34:00.104 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
-12:34:00.120 [Thread-11] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-12:34:00.127 [Thread-11] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-12:34:00.129 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
-12:34:00.131 [Thread-11] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
-12:34:00.250 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 8604 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-12:34:00.250 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-12:34:00.736 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-12:34:00.786 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 49 ms. Found 4 JPA repository interfaces.
-12:34:00.973 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-12:34:00.975 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-12:34:00.975 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-12:34:01.024 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-12:34:01.025 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 770 ms
-12:34:01.086 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-12:34:01.097 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Starting...
-12:34:01.189 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-4 - Start completed.
-12:34:01.190 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-12:34:01.288 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-12:34:01.289 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-12:34:01.702 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-12:34:02.216 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-12:34:02.238 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-12:34:02.248 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 2.049 seconds (JVM running for 1055.182)
-12:34:02.250 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+12:22:51.352 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'subAreaController' method 
+com.pe.crce.biblioteca.controller.SubAreaController#save(SubAreaDTORequest)
+to {POST [/v1/app-biblioteca/editorials/editorial]}: There is already 'editorialController' bean method
+com.pe.crce.biblioteca.controller.EditorialController#save(EditorialDTORequest) mapped.
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583) ~[spring-context-5.3.25.jar:5.3.25]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147) ~[spring-boot-2.7.9.jar:2.7.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731) ~[spring-boot-2.7.9.jar:2.7.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408) ~[spring-boot-2.7.9.jar:2.7.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307) ~[spring-boot-2.7.9.jar:2.7.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303) ~[spring-boot-2.7.9.jar:2.7.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292) ~[spring-boot-2.7.9.jar:2.7.9]
+	at com.pe.crce.biblioteca.AppBibliotecaApplication.main(AppBibliotecaApplication.java:15) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.7.9.jar:2.7.9]
+Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'subAreaController' method 
+com.pe.crce.biblioteca.controller.SubAreaController#save(SubAreaDTORequest)
+to {POST [/v1/app-biblioteca/editorials/editorial]}: There is already 'editorialController' bean method
+com.pe.crce.biblioteca.controller.EditorialController#save(EditorialDTORequest) mapped.
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721) ~[na:na]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205) ~[spring-webmvc-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863) ~[spring-beans-5.3.25.jar:5.3.25]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800) ~[spring-beans-5.3.25.jar:5.3.25]
+	... 21 common frames omitted
+12:23:13.239 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:23:13.239 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:23:13.352 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:23:13.366 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:23:13.419 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:23:13.419 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:23:13.419 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:23:13.433 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:23:13.433 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 192 ms
+12:23:13.454 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:23:13.457 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Starting...
+12:23:13.502 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Start completed.
+12:23:13.502 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:23:13.530 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:23:13.530 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:23:13.663 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:23:13.826 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:23:13.836 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:23:13.839 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.617 seconds (JVM running for 1176.114)
+12:23:13.841 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:23:46.886 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:23:46.895 [Thread-35] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:23:46.899 [Thread-35] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:23:46.899 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown initiated...
+12:23:46.901 [Thread-35] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-10 - Shutdown completed.
+12:23:46.957 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:23:46.957 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:23:47.069 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:23:47.084 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:23:47.134 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:23:47.135 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:23:47.135 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:23:47.147 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:23:47.147 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 190 ms
+12:23:47.169 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:23:47.172 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Starting...
+12:23:47.218 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Start completed.
+12:23:47.218 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:23:47.247 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:23:47.247 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:23:47.376 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:23:47.534 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:23:47.543 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:23:47.546 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.606 seconds (JVM running for 1209.821)
+12:23:47.548 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:25:52.012 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:25:52.012 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:25:52.013 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+12:26:17.942 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.SubAreaController - crce controller save -> {} SubAreaDTORequest(description=informatica forence, idArea=1)
+12:26:26.917 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 10
+12:29:19.131 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:29:19.140 [Thread-42] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:29:19.140 [Thread-42] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+12:29:19.145 [Thread-42] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:29:19.145 [Thread-42] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown initiated...
+12:29:19.147 [Thread-42] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-11 - Shutdown completed.
+12:29:19.217 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:29:19.217 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:29:19.357 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:29:19.372 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:29:19.436 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:29:19.437 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:29:19.437 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:29:19.450 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:29:19.450 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 231 ms
+12:29:19.472 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:29:19.476 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Starting...
+12:29:19.526 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Start completed.
+12:29:19.526 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:29:19.555 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:29:19.555 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:29:19.703 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:29:19.897 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:29:19.907 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:29:19.909 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.713 seconds (JVM running for 1542.184)
+12:29:19.910 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:30:13.329 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 2 class path changes (0 additions, 0 deletions, 2 modifications)
+12:30:13.338 [Thread-46] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:30:13.341 [Thread-46] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:30:13.341 [Thread-46] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown initiated...
+12:30:13.342 [Thread-46] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-12 - Shutdown completed.
+12:30:13.412 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:30:13.412 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:30:13.520 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:30:13.534 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:30:13.588 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:30:13.589 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:30:13.589 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:30:13.602 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:30:13.602 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 189 ms
+12:30:13.622 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:30:13.625 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Starting...
+12:30:13.781 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Start completed.
+12:30:13.782 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:30:13.810 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:30:13.810 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:30:13.944 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:30:14.100 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:30:14.110 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:30:14.113 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.715 seconds (JVM running for 1596.388)
+12:30:14.114 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:32:17.953 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:32:17.962 [Thread-50] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:32:17.966 [Thread-50] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:32:17.967 [Thread-50] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown initiated...
+12:32:17.967 [Thread-50] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-13 - Shutdown completed.
+12:32:18.025 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:32:18.025 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:32:18.134 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:32:18.149 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:32:18.198 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:32:18.199 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:32:18.199 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:32:18.217 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:32:18.217 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 190 ms
+12:32:18.239 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:32:18.241 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Starting...
+12:32:18.285 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Start completed.
+12:32:18.286 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:32:18.313 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:32:18.313 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:32:18.444 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:32:18.600 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:32:18.612 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:32:18.616 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.605 seconds (JVM running for 1720.891)
+12:32:18.618 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:33:41.638 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:33:41.645 [Thread-54] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:33:41.649 [Thread-54] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:33:41.650 [Thread-54] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown initiated...
+12:33:41.650 [Thread-54] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-14 - Shutdown completed.
+12:33:41.707 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:33:41.707 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:33:41.819 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:33:41.832 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 5 JPA repository interfaces.
+12:33:41.894 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:33:41.895 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:33:41.895 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:33:41.909 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:33:41.909 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 200 ms
+12:33:41.929 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:33:41.932 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Starting...
+12:33:41.976 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Start completed.
+12:33:41.976 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:33:42.008 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:33:42.008 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:33:42.137 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:33:42.286 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:33:42.294 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:33:42.298 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.605 seconds (JVM running for 1804.573)
+12:33:42.300 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:34:39.201 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+12:34:39.202 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+12:34:39.202 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 0 ms
+12:34:39.227 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findByDescription -> {} PageableDTO(page=0, size=8, order=Optional[1], field=Optional[id])
+12:35:50.420 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:35:50.427 [Thread-58] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:35:50.427 [Thread-58] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+12:35:50.430 [Thread-58] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:35:50.431 [Thread-58] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown initiated...
+12:35:50.432 [Thread-58] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-15 - Shutdown completed.
+12:35:50.489 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:35:50.489 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:35:50.603 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:35:50.617 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 13 ms. Found 5 JPA repository interfaces.
+12:35:50.668 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:35:50.668 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:35:50.668 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:35:50.682 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:35:50.682 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 191 ms
+12:35:50.704 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:35:50.707 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Starting...
+12:35:50.755 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Start completed.
+12:35:50.755 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:35:50.788 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:35:50.789 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:35:50.914 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:35:51.062 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:35:51.073 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:35:51.076 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.602 seconds (JVM running for 1933.351)
+12:35:51.077 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+12:36:26.088 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+12:36:26.096 [Thread-62] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:36:26.099 [Thread-62] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:36:26.099 [Thread-62] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown initiated...
+12:36:26.100 [Thread-62] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-16 - Shutdown completed.
+12:36:26.156 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 11272 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:36:26.156 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+12:36:26.265 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:36:26.279 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 5 JPA repository interfaces.
+12:36:26.353 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+12:36:26.354 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+12:36:26.354 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+12:36:26.367 [restartedMain] INFO  o.a.c.c.C.[Tomcat-1].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+12:36:26.367 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 210 ms
+12:36:26.387 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:36:26.390 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Starting...
+12:36:26.436 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-17 - Start completed.
+12:36:26.436 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:36:26.464 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:36:26.464 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:36:26.588 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:36:26.733 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+12:36:26.744 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+12:36:26.746 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 0.605 seconds (JVM running for 1969.022)
+12:36:26.747 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged

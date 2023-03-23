@@ -50,6 +50,8 @@ public final class BibliotecaConstant {
 	public static final String RESOURCE_LIBRARYS_LIBRARY = "/library";
 	public static final String RESOURCE_AREAS = "/areas";
 	public static final String RESOURCE_AREAS_AREA = "/area";
+	public static final String RESOURCE_SUBAREAS = "/sub-areas";
+	public static final String RESOURCE_SUBAREAS_SUBAREA = "/sub-area";
 
 	// =============================================================================================
 	// PATH DEL SISTEMA BIBLIOTECA FROENT-END
@@ -63,6 +65,8 @@ public final class BibliotecaConstant {
 	public static final String TAB_NAME_EDITORIAL = "t_editorial";
 	public static final String TAB_NAME_LIBRARY = "t_library";
 	public static final String TAB_NAME_AREA = "t_area";
+	public static final String TAB_NAME_SUB_AREA = "t_sub_area";
+
 
 
 	// =============================================================================================
