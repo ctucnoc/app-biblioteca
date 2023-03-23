@@ -4,9 +4,11 @@ import javax.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -52,5 +54,19 @@ public class SubAreaController {
 	public ResponseEntity<HrefEntityDTO> save(@RequestBody @Valid SubAreaDTORequest dto) {
 		log.info("crce controller save -> {} "+dto.toString());
 		return new ResponseEntity<HrefEntityDTO>(this.subAreaService.save(dto), HttpStatus.CREATED);
+	}
+	
+	@PutMapping(BibliotecaConstant.RESOURCE_SUBAREAS + BibliotecaConstant.RESOURCE_SUBAREAS_SUBAREA
+			+ BibliotecaConstant.RESOURCE_GENERIC_ID)
+	public ResponseEntity<HrefEntityDTO> update(@RequestBody SubAreaDTORequest dto, @PathVariable Long id) {
+		log.info("crce controller update -> {} "+dto.toString());
+		return new ResponseEntity<HrefEntityDTO>(this.subAreaService.update(dto, id), HttpStatus.OK);
+	}
+
+	@DeleteMapping(BibliotecaConstant.RESOURCE_SUBAREAS + BibliotecaConstant.RESOURCE_SUBAREAS_SUBAREA
+			+ BibliotecaConstant.RESOURCE_GENERIC_ID)
+	public ResponseEntity<HrefEntityDTO> delete(@PathVariable Long id) {
+		log.info("crce controller delete -> {} "+id);
+		return new ResponseEntity<HrefEntityDTO>(this.subAreaService.delete(id), HttpStatus.OK);
 	}
 }

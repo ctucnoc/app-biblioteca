@@ -52,7 +52,7 @@ public class AreaServiceImpl implements AreaService{
 	public HrefEntityDTO delete(Long id) {
 		Area area = this.areaRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found"));
-		area.setState(BibliotecaConstant.STATE_INSCTIVE);
+		area.setState(BibliotecaConstant.STATE_INACTIVE);
 		return this.util.createHrefFromResource(this.areaRepository.save(area).getId(), BibliotecaResource.AREA);
 	}
 

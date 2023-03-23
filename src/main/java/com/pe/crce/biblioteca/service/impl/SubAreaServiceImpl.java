@@ -61,5 +61,24 @@ public class SubAreaServiceImpl implements SubAreaService{
 	public Page<SubAreaDTO> findByDescription(String description, Pageable pageable) {
 		Page<SubArea> subareas = this.subAreaRepository.findByDescriptionContainingAndState(description, BibliotecaConstant.STATE_ACTIVE, pageable);		
 		return subareas.map((subarea)-> this.subAreaMapper.toDto(subarea));
+	}
+
+	@Override
+	public HrefEntityDTO update(SubAreaDTORequest dto, Long id) {
+		Area area = this.areaRepository.findByIdAndState(dto.getIdArea(), BibliotecaConstant.STATE_ACTIVE)
+				.orElseThrow(()-> new EntityNotFoundException("not found area"));
+		SubArea subArea = this.subAreaRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
+				.orElseThrow(()-> new EntityNotFoundException("not found sub-area"));
+		subArea.setDescription(dto.getDescription());
+		subArea.setArea(area);
+		return this.util.createHrefFromResource(this.subAreaRepository.save(subArea).getId(), BibliotecaResource.SUBAREA);
+	}
+
+	@Override
+	public HrefEntityDTO delete(Long id) {
+		SubArea subArea = this.subAreaRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
+				.orElseThrow(()-> new EntityNotFoundException("not found sub-area"));
+		subArea.setDescription(BibliotecaConstant.STATE_INACTIVE);
+		return this.util.createHrefFromResource(this.subAreaRepository.save(subArea).getId(), BibliotecaResource.SUBAREA);
 	}	
 }

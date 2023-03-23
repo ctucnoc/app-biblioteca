@@ -12,15 +12,16 @@
 	<artifactId>app-biblioteca</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>app-biblioteca</name>
-	<description>Demo project for Spring Boot</description>
+	<description>Proyecto Para el canal de Youtube</description>
 	<developers>
 		<developer>
 			<name>Cristian Tucno Conde</name>
-			<organization>Digital Corp Perú SAC</organization>
+			<organization>ACADEMIA FULLSTACK DEV</organization>
 			<email>ctc.tucno@gmail.com</email>
+			<url>https://www.youtube.com/channel/UC6l4VHVkCn1ydrgZdqMGMjw</url>
 			<roles>
 				<role>
-					- developer
+					- developer fullstack
 				</role>
 			</roles>
 		</developer>

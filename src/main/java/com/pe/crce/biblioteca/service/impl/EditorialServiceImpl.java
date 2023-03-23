@@ -20,11 +20,14 @@ import com.pe.crce.biblioteca.util.BibliotecaUtil;
 @Service
 public class EditorialServiceImpl implements EditorialService {
 
-	final EditorialRespository editorialRespository;
+	final 
+	EditorialRespository editorialRespository;
 
-	final EditorialMapper editorialMapper;
+	final 
+	EditorialMapper editorialMapper;
 
-	final BibliotecaUtil util;
+	final 
+	BibliotecaUtil util;
 
 	public EditorialServiceImpl(EditorialRespository editorialRespository, EditorialMapper editorialMapper,
 			BibliotecaUtil util) {
@@ -57,7 +60,8 @@ public class EditorialServiceImpl implements EditorialService {
 
 	@Override
 	public HrefEntityDTO update(EditorialDTORequest dto, Long id) {
-		Editorial editorial = this.editorialRespository.findById(id).get();
+		Editorial editorial = this.editorialRespository.findById(id)
+				.orElseThrow(()-> new EntityNotFoundException("not found editorial"));
 		editorial.setName(dto.getName());
 		return util.createHrefFromResource(this.editorialRespository.save(editorial).getId(),
 				BibliotecaResource.EDITORIAL);
@@ -68,6 +72,15 @@ public class EditorialServiceImpl implements EditorialService {
 		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%" + name + "%",
 				BibliotecaConstant.STATE_ACTIVE, pageable);
 		return editorialPages.map((bean) -> editorialMapper.toDto(bean));
+	}
+
+	@Override
+	public HrefEntityDTO delete(Long id) {
+		Editorial editorial = this.editorialRespository.findById(id)
+				.orElseThrow(()-> new EntityNotFoundException("not found editorial"));
+		editorial.setName(BibliotecaConstant.STATE_INACTIVE);
+		return util.createHrefFromResource(this.editorialRespository.save(editorial).getId(),
+				BibliotecaResource.EDITORIAL);
 	}
 
 }

@@ -15,6 +15,8 @@ public interface EditorialService {
 	
 	public HrefEntityDTO update(EditorialDTORequest dto,Long id);
 	
+	public HrefEntityDTO delete(Long id);
+	
 	public EditorialDTO findById(Long id);
 	
 	public List<EditorialDTO> findaLL();

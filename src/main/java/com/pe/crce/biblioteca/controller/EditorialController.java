@@ -4,6 +4,7 @@ import javax.validation.Valid;
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -50,13 +51,18 @@ public class EditorialController {
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL)
 	public ResponseEntity<HrefEntityDTO> save(@RequestBody @Valid EditorialDTORequest dto) {
-		return new ResponseEntity<HrefEntityDTO>(this.editorialService.save(dto), HttpStatus.OK);
+		return new ResponseEntity<HrefEntityDTO>(this.editorialService.save(dto), HttpStatus.CREATED);
 	}
 	
 	@PutMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL + BibliotecaConstant.RESOURCE_GENERIC_ID)
 	public ResponseEntity<HrefEntityDTO> update(@RequestBody EditorialDTORequest dto,@PathVariable Long id) {
 		return new ResponseEntity<HrefEntityDTO>(this.editorialService.update(dto, id), HttpStatus.OK);
 	}
-
+	
+	@DeleteMapping(BibliotecaConstant.RESOURCE_EDITORIALS + BibliotecaConstant.RESOURCE_EDITORIALS_EDITORIAL + BibliotecaConstant.RESOURCE_GENERIC_ID)
+	public ResponseEntity<HrefEntityDTO> delete(@PathVariable Long id) {
+		log.info("crce controler delete -> {} "+id);
+		return new ResponseEntity<HrefEntityDTO>(this.editorialService.delete(id), HttpStatus.OK);
+	}
 	
 }

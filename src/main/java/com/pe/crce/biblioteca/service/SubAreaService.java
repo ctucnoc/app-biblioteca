@@ -13,5 +13,9 @@ public interface SubAreaService {
 	
 	public HrefEntityDTO save(SubAreaDTORequest dto);
 	
+	public HrefEntityDTO update(SubAreaDTORequest dto,Long id);
+	
+	public HrefEntityDTO delete(Long id);
+	
 	public Page<SubAreaDTO> findByDescription(String description, Pageable pageable);
 }
