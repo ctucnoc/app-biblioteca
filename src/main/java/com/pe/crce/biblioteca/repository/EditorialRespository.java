@@ -1,6 +1,7 @@
 package com.pe.crce.biblioteca.repository;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -30,4 +31,6 @@ public interface EditorialRespository extends JpaRepository<Editorial, Long> {
 	// =============================================================================================
 	@Query(value = "select count(*)>0 from dbo.t_editorial where ideditorial =?1", nativeQuery = true)
 	public Boolean existByIdSQL(Long id);
+	
+	public Optional<Editorial> findByIdAndState(Long id, String state);
 }

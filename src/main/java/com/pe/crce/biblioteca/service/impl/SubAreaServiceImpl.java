@@ -3,6 +3,7 @@ package com.pe.crce.biblioteca.service.impl;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
@@ -19,6 +20,7 @@ import com.pe.crce.biblioteca.util.BibliotecaResource;
 import com.pe.crce.biblioteca.util.BibliotecaUtil;
 
 @Service
+@Transactional
 public class SubAreaServiceImpl implements SubAreaService{
 
 	final
