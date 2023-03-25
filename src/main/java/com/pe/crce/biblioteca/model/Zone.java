@@ -5,34 +5,40 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
+
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
+
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
+@Builder
 @NoArgsConstructor
 @AllArgsConstructor
 @Entity
-@Table(name = BibliotecaConstant.TAB_NAME_LIBRARY, schema = BibliotecaConstant.SEC_NAME_DBO)
-public class Library {
-
+@ToString
+@Table(name = BibliotecaConstant.TAB_NAME_ZONA, schema = BibliotecaConstant.SEC_NAME_DBO)
+public class Zone {
+	
 	@Id
-	@Column(name = "idlibrary")
+	@Column(name = "idzone")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "name")
-	private String name;
 	
 	@Column(name = "description")
 	private String description;
 	
-	@Column(name = "address")
-	private String address;
-	
-	@Column(name = "state")
+	@Column(name = "state", insertable = false)
 	private String state;
 	
+	@ManyToOne
+	@JoinColumn(name = "idlibrary")
+	private Library library;
+
 }

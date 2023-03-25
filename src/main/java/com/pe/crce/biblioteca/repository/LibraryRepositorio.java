@@ -1,6 +1,8 @@
 package com.pe.crce.biblioteca.repository;
 
 import java.util.List;
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Repository;
@@ -28,5 +30,7 @@ public interface LibraryRepositorio extends JpaRepository<Library, Long> {
 	// =============================================================================================
 	@Query(value = "select count(*)>0 from dbo.t_library where idlibrary = ?1", nativeQuery = true)
 	public Boolean existsByidSQL(Long id);
+	
+	public Optional<Library> findByIdAndState(Long id, String state);
 
 }
