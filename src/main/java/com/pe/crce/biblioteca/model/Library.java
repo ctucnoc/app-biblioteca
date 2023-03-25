@@ -32,7 +32,7 @@ public class Library {
 	@Column(name = "address")
 	private String address;
 	
-	@Column(name = "state")
+	@Column(name = "state", insertable = false)
 	private String state;
 	
 }

@@ -2,7 +2,6 @@ package com.pe.crce.biblioteca.dto.request;
 
 import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -13,13 +12,14 @@ import lombok.NoArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class ZoneDTORequest {
+public class LibraryDTORequest {
 	
 	@NotNull
 	@NotEmpty
-	@Size(min = 10, max = 100)
-	private String description;
+	private String name;
 	
 	@NotNull
-	private Long idLibrary;
+	@NotEmpty
+	private String description;
+	private String address;
 }
