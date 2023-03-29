@@ -50,7 +50,25 @@ public final class BibliotecaUtil {
 		}
 		return pageable;
 	}
-	
+
+	public Pageable getPageableSQL(PageableDTO pageableDTO, BibliotecaResource resource) {
+		Optional<Integer> sortOrder = pageableDTO.getOrder();
+		Optional<String> sortField = pageableDTO.getField();
+		Integer pageNumber = pageableDTO.getPageNumber();
+		Integer perPage = pageableDTO.getPageSize();
+
+		Pageable pageable;
+		if (sortOrder.isPresent() && sortField.isPresent()) {
+			Sort.Direction direction = sortOrder.get().equals(1) ? Sort.Direction.ASC : Sort.Direction.DESC;
+			pageable = PageRequest.of(pageNumber, perPage, Sort.by(direction,
+					sortField.get().equals("id") ? "id" + resource.toString().toLowerCase() : sortField.get()));
+		} else {
+			pageable = PageRequest.of(pageNumber, perPage,
+					Sort.by(Sort.Direction.DESC, "id" + resource.toString().toLowerCase()));
+		}
+		return pageable;
+	}
+
 	public HrefEntityDTO createHrefFromResource(Object id, BibliotecaResource resource)
 			throws EntityGenericServerException {
 		HrefEntityDTO hrefEntity = new HrefEntityDTO();
@@ -247,5 +265,14 @@ public final class BibliotecaUtil {
 		} else {
 			return zfill(0 + value, countDigito);
 		}
+	}
+
+	public static String preFormatCadena(String ref_cadena) {
+		String ref_a = ref_cadena.toLowerCase().replace('á', 'a');
+		String ref_e = ref_a.toLowerCase().replace('é', 'e');
+		String ref_i = ref_e.toLowerCase().replace('í', 'i');
+		String ref_o = ref_i.toLowerCase().replace('ó', 'o');
+		String ref_u = ref_o.toLowerCase().replace('ú', 'u');
+		return ref_u;
 	}
 }

@@ -52,7 +52,7 @@ public class AreaController {
 
 	@PostMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA)
 	public ResponseEntity<HrefEntityDTO> save(@RequestBody @Valid AreaDTORequest dto) {
-		return new ResponseEntity<HrefEntityDTO>(this.areaService.save(dto), HttpStatus.OK);
+		return new ResponseEntity<HrefEntityDTO>(this.areaService.save(dto), HttpStatus.CREATED);
 	}
 
 	@PutMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA

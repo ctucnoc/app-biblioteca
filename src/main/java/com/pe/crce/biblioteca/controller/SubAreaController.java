@@ -33,15 +33,15 @@ public class SubAreaController {
 	final
 	BibliotecaUtil util;
 	
+	public SubAreaController(SubAreaService subAreaService, BibliotecaUtil util) {
+		this.subAreaService = subAreaService;
+		this.util = util;
+	}
+	
 	@GetMapping(BibliotecaConstant.RESOURCE_SUBAREAS + BibliotecaConstant.RESOURCE_SUBAREAS_SUBAREA)
 	public ResponseEntity<Page<SubAreaDTO>> findByDescription(@RequestParam String description,PageableDTO pageable){
 		log.info("crce controller findByDescription -> {} "+pageable.toString());
 		return new ResponseEntity<Page<SubAreaDTO>>(this.subAreaService.findByDescription(description,this.util.getPageable(pageable)), HttpStatus.OK);
-	}
-	
-	public SubAreaController(SubAreaService subAreaService, BibliotecaUtil util) {
-		this.subAreaService = subAreaService;
-		this.util = util;
 	}
 
 	@GetMapping(BibliotecaConstant.RESOURCE_SUBAREAS + BibliotecaConstant.RESOURCE_SUBAREAS_SUBAREA + BibliotecaConstant.RESOURCE_GENERIC_ID)

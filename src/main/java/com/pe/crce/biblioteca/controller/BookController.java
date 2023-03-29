@@ -1,8 +1,6 @@
 package com.pe.crce.biblioteca.controller;
 
 import javax.validation.Valid;
-
-import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -12,19 +10,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
-
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.BookDTO;
-import com.pe.crce.biblioteca.dto.EditorialDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
-import com.pe.crce.biblioteca.dto.PageableDTO;
 import com.pe.crce.biblioteca.dto.request.BookDTORequest;
-import com.pe.crce.biblioteca.dto.request.EditorialDTORequest;
 import com.pe.crce.biblioteca.service.BookService;
 import com.pe.crce.biblioteca.util.BibliotecaUtil;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j

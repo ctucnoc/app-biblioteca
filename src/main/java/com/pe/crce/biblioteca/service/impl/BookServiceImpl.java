@@ -2,7 +2,6 @@ package com.pe.crce.biblioteca.service.impl;
 
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.BookDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
@@ -98,6 +97,4 @@ public class BookServiceImpl implements BookService{
 				.orElseThrow(()-> new EntityNotFoundException("not found book"));
 		return this.bookMapper.toDto(book);
 	}
-	
-	
 }

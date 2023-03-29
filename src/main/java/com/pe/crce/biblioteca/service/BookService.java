@@ -10,5 +10,4 @@ public interface BookService {
 	public HrefEntityDTO update(BookDTORequest dto, Long id);
 	public HrefEntityDTO delete(Long id);
 	public BookDTO findById(Long id);
-
 }

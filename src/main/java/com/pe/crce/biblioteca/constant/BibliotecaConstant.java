@@ -56,6 +56,10 @@ public final class BibliotecaConstant {
 	public static final String RESOURCE_ZONES_ZONE = "/zone";
 	public static final String RESOURCE_BOOKS = "/books";
 	public static final String RESOURCE_BOOKS_BOOK = "/book";
+	public static final String RESOURCE_SPECIMENSTATES = "/specimen-states";
+	public static final String RESOURCE_SPECIMENSTATES_SPECIMENSTATE = "/specimen-state";
+	public static final String RESOURCE_SPECIMENS = "/specimens";
+	public static final String RESOURCE_SPECIMENS_SPECIMEN = "/specimen";
 
 	// =============================================================================================
 	// PATH DEL SISTEMA BIBLIOTECA FROENT-END
@@ -71,9 +75,10 @@ public final class BibliotecaConstant {
 	public static final String TAB_NAME_AREA = "t_area";
 	public static final String TAB_NAME_SUB_AREA = "t_sub_area";
 	public static final String TAB_NAME_ZONA = "t_zone";
+	public static final String TAB_NAME_BOOK_AUTHOR = "t_book_author";
+	public static final String TAB_NAME_SPECIMEN_STATE = "t_specimen_state";
+	public static final String TAB_NAME_SPECIMEN = "t_specimen";
 	public static final String TAB_NAME_BOOK = "t_book";
-
-
 
 	// =============================================================================================
 	// NOMBRE DE LOS ESQUEMAS
@@ -87,5 +92,7 @@ public final class BibliotecaConstant {
 	public static final String SP_SEARCH_AUTHOR_COUNT = "select count(*) from dbo.fn_search_author(?1,?2)";
 	public static final String SP_SAVE_AUTHOR = "select * from dbo.fn_save_author(?1,?2)";
 	public static final String SP_SAVE_AUTHOR_COUNT = "select count(*) from dbo.fn_save_author(?1,?2)";
+	public static final String SP_SEARCH_BOOK = "select * from dbo.fn_search_book_word_key(?1,?2)";
+	public static final String SP_SEARCH_BOOK_COUNT = "select count(*) from dbo.fn_search_book_word_key(?1,?2)";
 
 }

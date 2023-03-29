@@ -13,28 +13,30 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import lombok.ToString;
 
 @Data
 @Builder
+@Entity
+@ToString
 @NoArgsConstructor
 @AllArgsConstructor
-@Entity
-@Table(name = BibliotecaConstant.TAB_NAME_ZONA, schema = BibliotecaConstant.SEC_NAME_DBO)
-public class Zone {
-	
+@Table(name = BibliotecaConstant.TAB_NAME_BOOK_AUTHOR, schema = BibliotecaConstant.SEC_NAME_DBO)
+public class BookAuthor {
+
 	@Id
-	@Column(name = "idzone")
+	@Column(name = "idbookauthor")
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
-	@Column(name = "description")
-	private String description;
-	
+		
 	@Column(name = "state", insertable = false)
 	private String state;
 	
 	@ManyToOne
-	@JoinColumn(name = "idlibrary")
-	private Library library;
-
+	@JoinColumn(name = "idauthor")
+	private Author author;
+	
+	@ManyToOne
+	@JoinColumn(name = "idbook")
+	private Book book;
 }
