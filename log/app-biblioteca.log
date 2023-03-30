@@ -448,3 +448,9 @@ Caused by: org.hibernate.QueryException: No data type for node: org.hibernate.hq
 16:58:11.261 [http-nio-9090-exec-5] WARN  o.s.web.servlet.PageNotFound - Request method 'GET' not supported
 16:59:22.258 [http-nio-9090-exec-8] INFO  c.p.c.b.c.SpecimenStateController - crce SpecimenStateController findByDescription -> {} PageableDTO(page=0, size=8, order=Optional[0], field=Optional[id])
 16:59:40.259 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.ZonaController - crce ZonaController findByDescription -> {} PageableDTO(page=0, size=8, order=Optional[1], field=Optional[id])
+17:15:32.910 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+17:15:32.990 [RMI TCP Connection(29)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+17:15:32.996 [RMI TCP Connection(29)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+17:15:33.036 [RMI TCP Connection(29)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+17:15:33.055 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+17:15:33.063 [RMI TCP Connection(29)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
