@@ -60,6 +60,8 @@ public final class BibliotecaConstant {
 	public static final String RESOURCE_SPECIMENSTATES_SPECIMENSTATE = "/specimen-state";
 	public static final String RESOURCE_SPECIMENS = "/specimens";
 	public static final String RESOURCE_SPECIMENS_SPECIMEN = "/specimen";
+	public static final String RESOURCE_BOOKAUTHORS = "/book-authors";
+	public static final String RESOURCE_BOOKAUTHORS_BOOKAUTHOR = "/book-author";
 
 	// =============================================================================================
 	// PATH DEL SISTEMA BIBLIOTECA FROENT-END

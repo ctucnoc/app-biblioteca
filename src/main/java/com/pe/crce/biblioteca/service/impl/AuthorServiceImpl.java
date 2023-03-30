@@ -37,14 +37,14 @@ public class AuthorServiceImpl implements AuthorService{
 
 	@Override
 	public Page<AuthorDTO> findByKeyWordSQL(String key_word,Pageable pageable) {
-		Page<Author> list = this.authorRepository.findByKeyWordSQL(key_word, BibliotecaConstant.STATE_ACTIVE,pageable);
+		Page<Author> list = this.authorRepository.findByKeyWordJPQL(key_word, BibliotecaConstant.STATE_ACTIVE,pageable);
 		return list
 				.map((bean)->authorMapper.toDto(bean));
 	}
 
 	@Override
 	public HrefEntityDTO saveSQL(AuthorDTORequest dto) {
-		Author author = this.authorRepository.saveSQL(dto.getName(), dto.getLastName());
+		Author author = this.authorRepository.save(this.authorMapper.toBean(dto));
 		return util.createHrefFromResource(author.getId(), BibliotecaResource.AUTHOR);
 	}
 

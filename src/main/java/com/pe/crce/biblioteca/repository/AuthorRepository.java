@@ -12,6 +12,9 @@ import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 @Repository
 public interface AuthorRepository extends JpaRepository<Author, Long> {
 
+	@Query("SELECT ea FROM Author ea WHERE ea.state = ?2 and LOWER(CONCAT(ea.name,ea.lastName)) LIKE CONCAT('%',?1,'%')")
+	public Page<Author> findByKeyWordJPQL(String key_word, String state,Pageable pageable);
+	
 	@Query(value = BibliotecaConstant.SP_SEARCH_AUTHOR, nativeQuery = true, countQuery = BibliotecaConstant.SP_SEARCH_AUTHOR_COUNT)
 	public Page<Author> findByKeyWordSQL(String key_word, String state,Pageable pageable);
 	
