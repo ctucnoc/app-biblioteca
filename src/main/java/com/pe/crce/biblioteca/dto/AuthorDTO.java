@@ -14,5 +14,6 @@ import lombok.NoArgsConstructor;
 public class AuthorDTO implements Serializable{
 
 	private Long id;
-	private String authorName;
+	private String name;
+	private String lastName;
 }
