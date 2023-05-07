@@ -25,6 +25,6 @@ public class Author {
 	@Column(name = "lastname")
 	private String lastName;
 
-	@Column(name = "state")
+	@Column(name = "state",insertable = false)
 	private String state;
 }

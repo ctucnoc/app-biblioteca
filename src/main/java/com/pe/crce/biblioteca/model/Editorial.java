@@ -24,7 +24,7 @@ public class Editorial {
 	@Column(name = "name",length = 100)
 	private String name;
 	
-	@Column(name = "state", length = 1)
+	@Column(name = "state", length = 1,insertable = false)
 	private String state;
 	
 }
