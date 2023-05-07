@@ -17,4 +17,6 @@ public interface SubAreaRepository extends JpaRepository<SubArea, Long>{
 	public Page<SubArea> findByDescriptionContainingAndState(String description, String state, Pageable pageable);
 	
 	public Boolean existsByDescriptionAndAreaAndState(String description,Area area, String state);
+	
+	public Page<SubArea> findByAreaAndState(Area area, String state, Pageable pageable);
 }

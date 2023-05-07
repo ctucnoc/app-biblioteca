@@ -63,6 +63,7 @@ public final class BibliotecaConstant {
 	public static final String RESOURCE_BOOKAUTHORS = "/book-authors";
 	public static final String RESOURCE_BOOKAUTHORS_BOOKAUTHOR = "/book-author";
 	public static final String RESOURCE_GENERIC_FILTER = "/filter";
+	public static final String RESOURCE_AREA_ID = "/filter/{idArea}";
 
 	// =============================================================================================
 	// PATH DEL SISTEMA BIBLIOTECA FROENT-END

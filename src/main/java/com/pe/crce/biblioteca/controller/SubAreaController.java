@@ -1,7 +1,10 @@
 package com.pe.crce.biblioteca.controller;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
+
 import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -14,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
+import com.pe.crce.biblioteca.dto.GenericDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.PageableDTO;
 import com.pe.crce.biblioteca.dto.SubAreaDTO;
@@ -69,4 +73,10 @@ public class SubAreaController {
 		log.info("crce controller delete -> {} "+id);
 		return new ResponseEntity<HrefEntityDTO>(this.subAreaService.delete(id), HttpStatus.OK);
 	}
+	@GetMapping(BibliotecaConstant.RESOURCE_SUBAREAS + BibliotecaConstant.RESOURCE_SUBAREAS_SUBAREA + BibliotecaConstant.RESOURCE_AREA_ID)
+	public ResponseEntity<Page<GenericDTO>> findByArea(@PathVariable @NotNull Long idArea,PageableDTO pageable) {
+		log.info("crce controller findById -> {} "+idArea);
+		return new ResponseEntity<Page<GenericDTO>>(this.subAreaService.findByAre(idArea,util.getPageable(pageable)), HttpStatus.OK);
+	}
+	
 }

@@ -1,11 +1,14 @@
 package com.pe.crce.biblioteca.service.impl;
 
+import java.util.stream.Collectors;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
+import com.pe.crce.biblioteca.dto.GenericDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.SubAreaDTO;
 import com.pe.crce.biblioteca.dto.request.SubAreaDTORequest;
@@ -86,5 +89,20 @@ public class SubAreaServiceImpl implements SubAreaService{
 				.orElseThrow(()-> new EntityNotFoundException("not found sub-area"));
 		subArea.setDescription(BibliotecaConstant.STATE_INACTIVE);
 		return this.util.createHrefFromResource(this.subAreaRepository.save(subArea).getId(), BibliotecaResource.SUBAREA);
-	}	
+	}
+
+	@Override
+	public Page<GenericDTO> findByAre(Long idArea, Pageable pageable) {
+		Area area = this.areaRepository.findByIdAndState(idArea, BibliotecaConstant.STATE_ACTIVE)
+				.orElseThrow(()-> new EntityNotFoundException("not found area"));
+		return this.subAreaRepository.findByAreaAndState(area, BibliotecaConstant.STATE_ACTIVE, pageable)
+				.map((bean)->this.convertGenericDTO(bean));
+	}
+	
+	private GenericDTO convertGenericDTO(SubArea subArea) {
+		return GenericDTO.builder()
+				.id(subArea.getId())
+				.description(subArea.getDescription())
+				.build();
+	}
 }
