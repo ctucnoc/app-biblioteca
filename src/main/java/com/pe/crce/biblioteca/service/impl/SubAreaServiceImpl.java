@@ -10,6 +10,7 @@ import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.SubAreaDTO;
 import com.pe.crce.biblioteca.dto.request.SubAreaDTORequest;
 import com.pe.crce.biblioteca.errorhandler.EntityNotFoundException;
+import com.pe.crce.biblioteca.errorhandler.EntityUnprocessableException;
 import com.pe.crce.biblioteca.mapper.SubAreaMapper;
 import com.pe.crce.biblioteca.model.Area;
 import com.pe.crce.biblioteca.model.SubArea;
@@ -53,6 +54,9 @@ public class SubAreaServiceImpl implements SubAreaService{
 	public HrefEntityDTO save(SubAreaDTORequest dto) {
 		Area area = this.areaRepository.findByIdAndState(dto.getIdArea(), BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found area"));
+		if(this.subAreaRepository.existsByDescriptionAndAreaAndState(dto.getDescription(),area, BibliotecaConstant.STATE_ACTIVE)) {
+			throw new EntityUnprocessableException(String.format("the area with id %s and description already exists", area.getId().toString()));
+		}		
 		SubArea subArea = SubArea.builder()
 				.description(dto.getDescription())
 				.area(area).build();

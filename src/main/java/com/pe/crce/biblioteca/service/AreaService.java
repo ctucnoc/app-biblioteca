@@ -1,5 +1,7 @@
 package com.pe.crce.biblioteca.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
@@ -18,4 +20,6 @@ public interface AreaService {
 	public Page<AreaDTO> findByDescription(String description, Pageable pageable);
 	
 	public AreaDTO findById(Long id);
+	
+	public List<AreaDTO> findByDescriptionFilter(String description);
 }

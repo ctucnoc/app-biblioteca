@@ -1,5 +1,8 @@
 package com.pe.crce.biblioteca.service.impl;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -61,7 +64,7 @@ public class AreaServiceImpl implements AreaService{
 	@Transactional(readOnly = true)
 	@Override
 	public Page<AreaDTO> findByDescription(String description, Pageable pageable) {
-		Page<Area> areas = this.areaRepository.findByDescriptionContainingAndState(description, BibliotecaConstant.STATE_ACTIVE,pageable);
+		Page<Area> areas = this.areaRepository.findByDescriptionContainingIgnoreCaseAndState(BibliotecaUtil.preFormatCadena(description), BibliotecaConstant.STATE_ACTIVE,pageable);
 		return areas.map((bean)-> this.areaMapper.toDto(bean));
 	}
 
@@ -71,6 +74,15 @@ public class AreaServiceImpl implements AreaService{
 		Area area = this.areaRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found"));
 		return this.areaMapper.toDto(area);
+	}
+
+	@Override
+	public List<AreaDTO> findByDescriptionFilter(String description) {
+		return this.areaRepository.findByDescriptionContainingIgnoreCaseAndState(BibliotecaUtil.preFormatCadena(description), BibliotecaConstant.STATE_ACTIVE)
+				.stream()
+				.limit(15)
+				.map((bean)-> areaMapper.toDto(bean))
+				.collect(Collectors.toList());
 	}
 	
 }

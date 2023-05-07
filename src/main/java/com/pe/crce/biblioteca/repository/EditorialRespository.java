@@ -13,12 +13,12 @@ import com.pe.crce.biblioteca.model.Editorial;
 @Repository
 public interface EditorialRespository extends JpaRepository<Editorial, Long> {
 
-	public Page<Editorial> findByNameLikeAndState(String name, String state, Pageable pePageable);
+	public Page<Editorial> findByNameContainingIgnoreCaseAndState(String name, String state, Pageable pePageable);
 
 	// =============================================================================================
 	// PRIMERA FORMA .- POR NOMBRE DE METODO
 	// =============================================================================================
-	public List<Editorial> findByNameContainingOrderByIdAsc(String name);
+	public List<Editorial> findByNameContainingIgnoreCaseOrderByIdAsc(String name);
 
 	// =============================================================================================
 	// SEGUNDA FORMA .- MEDIANTE JPQL

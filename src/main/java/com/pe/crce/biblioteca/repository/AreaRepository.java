@@ -1,5 +1,6 @@
 package com.pe.crce.biblioteca.repository;
 
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.data.domain.Page;
@@ -12,7 +13,9 @@ import com.pe.crce.biblioteca.model.Area;
 @Repository
 public interface AreaRepository extends JpaRepository<Area, Long>{
 
-	public Page<Area> findByDescriptionContainingAndState(String description, String state,Pageable pageable);
+	public Page<Area> findByDescriptionContainingIgnoreCaseAndState(String description, String state,Pageable pageable);
 	
 	public Optional<Area> findByIdAndState(Long id, String state);
+	
+	public List<Area> findByDescriptionContainingIgnoreCaseAndState(String description, String state);
 }

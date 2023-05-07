@@ -1,6 +1,10 @@
 package com.pe.crce.biblioteca.controller;
 
+import java.util.List;
+
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
+
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -28,9 +32,11 @@ import lombok.extern.slf4j.Slf4j;
 @RequestMapping(BibliotecaConstant.RESOURCE_GENERIC)
 public class AreaController {
 
-	final AreaService areaService;
+	final 
+	AreaService areaService;
 
-	final BibliotecaUtil util;
+	final 
+	BibliotecaUtil util;
 
 	public AreaController(AreaService areaService, BibliotecaUtil util) {
 		this.areaService = areaService;
@@ -65,5 +71,10 @@ public class AreaController {
 			+ BibliotecaConstant.RESOURCE_GENERIC_ID)
 	public ResponseEntity<HrefEntityDTO> delete(@PathVariable Long id) {
 		return new ResponseEntity<HrefEntityDTO>(this.areaService.delete(id), HttpStatus.OK);
+	}
+	
+	@GetMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA + BibliotecaConstant.RESOURCE_GENERIC_FILTER)
+	public ResponseEntity<List<AreaDTO>> findByDescriptionFilter(@RequestParam @NotBlank String description){
+		return new ResponseEntity<List<AreaDTO>>(this.areaService.findByDescriptionFilter(description), HttpStatus.OK);
 	}
 }

@@ -19,6 +19,6 @@ public class EditorialDTORequest {
 	@NotBlank
 	
 	//VALIDA LA LONGITUD MINIMA Y MAXIMA DE UNA CADENA
-	@Size(min = 10,max = 100)
+	@Size(min = 5,max = 100)
 	private String name;
 }

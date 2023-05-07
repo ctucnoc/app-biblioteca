@@ -68,7 +68,7 @@ public class EditorialServiceImpl implements EditorialService {
 
 	@Override
 	public Page<EditorialDTO> findByNameLike(String name, Pageable pageable) {
-		Page<Editorial> editorialPages = this.editorialRespository.findByNameLikeAndState("%" + name + "%",
+		Page<Editorial> editorialPages = this.editorialRespository.findByNameContainingIgnoreCaseAndState(BibliotecaUtil.preFormatCadena(name),
 				BibliotecaConstant.STATE_ACTIVE, pageable);
 		return editorialPages.map((bean) -> editorialMapper.toDto(bean));
 	}

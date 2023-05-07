@@ -21,12 +21,12 @@ public class AuthorDTORequest{
 	@NotNull
 	@NotEmpty
 	@NotBlank
-	@Size(min = 10, max = 60)
+	@Size(min = 5, max = 60)
 	private String name;
 	
 	@NotNull
 	@NotEmpty
 	@NotBlank
-	@Size(min = 10, max = 60)
+	@Size(min = 5, max = 60)
 	private String lastName;
 }
