@@ -369,3 +369,20 @@ Identify and stop the process that's listening on port 9090 or configure this ap
 12:11:23.399 [RMI TCP Connection(6)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 12:11:23.404 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 12:11:23.408 [RMI TCP Connection(6)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+12:14:17.043 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - Starting AppBibliotecaApplicationTests using Java 11.0.2 on LAPTOP-JAN5R6IP with PID 2920 (started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+12:14:17.045 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - The following 1 profile is active: "dev"
+12:14:18.192 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+12:14:18.353 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 150 ms. Found 10 JPA repository interfaces.
+12:14:19.182 [main] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+12:14:19.268 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+12:14:19.535 [main] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+12:14:19.862 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+12:14:20.119 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+12:14:20.154 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+12:14:21.041 [main] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+12:14:21.068 [main] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+12:14:22.824 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+12:14:24.713 [main] INFO  c.p.c.b.AppBibliotecaApplicationTests - Started AppBibliotecaApplicationTests in 8.169 seconds (JVM running for 9.348)
+12:14:24.917 [SpringApplicationShutdownHook] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:14:24.922 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+12:14:24.938 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

@@ -1,12 +1,9 @@
 package com.pe.crce.biblioteca.service.impl;
 
-import java.util.stream.Collectors;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.GenericDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
@@ -87,7 +84,7 @@ public class SubAreaServiceImpl implements SubAreaService{
 	public HrefEntityDTO delete(Long id) {
 		SubArea subArea = this.subAreaRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found sub-area"));
-		subArea.setDescription(BibliotecaConstant.STATE_INACTIVE);
+		subArea.setState(BibliotecaConstant.STATE_INACTIVE);
 		return this.util.createHrefFromResource(this.subAreaRepository.save(subArea).getId(), BibliotecaResource.SUBAREA);
 	}
 
