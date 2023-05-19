@@ -22,4 +22,6 @@ public interface BookRepository extends JpaRepository<Book, Long>{
 	"LOWER(CONCAT(eb.title,eb.subtitle,eb.isbn,eb.description,eb.yearPublication,ee.name,esa.description,ea.description)) \n"+
 	"LIKE CONCAT('%',?1,'%')")
 	public Page<Book> findByKeyWordJPQL(String key_word, String state, Pageable pageable);
+	
+	public Boolean existsByIsbnAndState(String isbn, String state);
 }

@@ -13,4 +13,5 @@ public interface BookService {
 	public HrefEntityDTO delete(Long id);
 	public BookDTO findById(Long id);
 	public Page<BookDTO> findByKeyWordJPQL(String key_word, Pageable pageable);
+	public Boolean existsByIsbn(String isbn);
 }

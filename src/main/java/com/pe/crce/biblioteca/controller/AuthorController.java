@@ -2,7 +2,6 @@ package com.pe.crce.biblioteca.controller;
 
 import javax.validation.Valid;
 import org.springframework.data.domain.Page;
-import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -17,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
 import com.pe.crce.biblioteca.dto.AuthorDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
+import com.pe.crce.biblioteca.dto.PageableDTO;
 import com.pe.crce.biblioteca.dto.request.AuthorDTORequest;
 import com.pe.crce.biblioteca.service.AuthorService;
 import com.pe.crce.biblioteca.util.BibliotecaUtil;
@@ -39,8 +39,8 @@ public class AuthorController {
 	}
 
 	@GetMapping(BibliotecaConstant.RESOURCE_AUTHORS + BibliotecaConstant.RESOURCE_AUTHORS_AUTHOR)
-	public ResponseEntity<Page<AuthorDTO>> findByKeyWordSQL(@RequestParam String key_word,Pageable pageable) {
-		return new ResponseEntity<Page<AuthorDTO>>(this.authorService.findByKeyWordSQL(key_word,pageable), HttpStatus.OK);
+	public ResponseEntity<Page<AuthorDTO>> findByKeyWordSQL(@RequestParam String key_word,PageableDTO pageable) {
+		return new ResponseEntity<Page<AuthorDTO>>(this.authorService.findByKeyWordSQL(key_word,this.util.getPageable(pageable)), HttpStatus.OK);
 	}
 	
 	@PostMapping(BibliotecaConstant.RESOURCE_AUTHORS + BibliotecaConstant.RESOURCE_AUTHORS_AUTHOR)

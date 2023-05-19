@@ -1,6 +1,7 @@
 package com.pe.crce.biblioteca.controller;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotNull;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -71,5 +72,11 @@ public class ZonaController {
 	public ResponseEntity<HrefEntityDTO> delete(@PathVariable Long id) {
 		log.info("crce controller delete -> {} "+id);
 		return new ResponseEntity<HrefEntityDTO>(this.zonaService.delete(id), HttpStatus.OK);
+	}
+	
+	@GetMapping(BibliotecaConstant.RESOURCE_ZONES + BibliotecaConstant.RESOURCE_ZONES_ZONE + BibliotecaConstant.RESOURCE_LIBRARY_ID)
+	public ResponseEntity<Page<ZoneDTO>> findByLibrary(@PathVariable(required = true) @NotNull Long idLibrary,PageableDTO pageable) {
+		log.info("crce controller findByLibrary -> {} "+idLibrary);
+		return new ResponseEntity<Page<ZoneDTO>>(this.zonaService.findByLibrary(idLibrary,util.getPageable(pageable)), HttpStatus.OK);
 	}
 }

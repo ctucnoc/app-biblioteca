@@ -77,7 +77,7 @@ public class EditorialServiceImpl implements EditorialService {
 	public HrefEntityDTO delete(Long id) {
 		Editorial editorial = this.editorialRespository.findById(id)
 				.orElseThrow(() -> new EntityNotFoundException("not found editorial"));
-		editorial.setName(BibliotecaConstant.STATE_INACTIVE);
+		editorial.setState(BibliotecaConstant.STATE_INACTIVE);
 		return util.createHrefFromResource(this.editorialRespository.save(editorial).getId(),
 				BibliotecaResource.EDITORIAL);
 	}

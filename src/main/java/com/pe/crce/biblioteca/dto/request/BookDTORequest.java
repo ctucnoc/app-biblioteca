@@ -20,7 +20,7 @@ public class BookDTORequest {
 	
 	@NotNull
 	@NotEmpty
-	private String subtitle;
+	private String subTitle;
 	private String isbn;
 	private String description;
 	private String numberPage;

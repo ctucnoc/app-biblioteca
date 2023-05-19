@@ -1,6 +1,7 @@
 package com.pe.crce.biblioteca.controller;
 
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 
 import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
@@ -65,5 +66,11 @@ public class BookController {
 	public ResponseEntity<HrefEntityDTO> delete(@PathVariable Long id) {
 		log.info("crce controler delete -> {} "+id);
 		return new ResponseEntity<HrefEntityDTO>(this.bookService.delete(id), HttpStatus.OK);
+	}
+	
+	@GetMapping(BibliotecaConstant.RESOURCE_BOOKS + BibliotecaConstant.RESOURCE_BOOKS_BOOK + BibliotecaConstant.RESOURCE_GENERIC_FILTER)
+	public ResponseEntity<Boolean> existByIsbn(@RequestParam(required = true) @NotBlank String isbn){
+		log.info("crce controler existByIsbn -> {} "+isbn);
+		return new ResponseEntity<Boolean>(this.bookService.existsByIsbn(isbn),HttpStatus.OK);
 	}
 }

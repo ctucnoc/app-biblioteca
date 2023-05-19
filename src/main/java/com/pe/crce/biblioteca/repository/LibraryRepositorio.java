@@ -34,5 +34,8 @@ public interface LibraryRepositorio extends JpaRepository<Library, Long> {
 	public Boolean existsByidSQL(Long id);
 	
 	public Optional<Library> findByIdAndState(Long id, String state);
+	
+	@Query("select li from Library li where LOWER(CONCAT(li.name,li.description,li.address)) like CONCAT('%',LOWER(?1),'%') and li.state = ?2")
+	public List<Library> findByKeyWordLikeJPA(String key_word, String state);
 
 }

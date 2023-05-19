@@ -1,6 +1,8 @@
 package com.pe.crce.biblioteca.controller;
 
+import java.util.List;
 import javax.validation.Valid;
+import javax.validation.constraints.NotBlank;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
@@ -70,6 +72,11 @@ public class LibraryController {
 	public ResponseEntity<HrefEntityDTO> delete(@PathVariable Long id) {
 		log.info("crce LibraryController delete -> {} " + id);
 		return new ResponseEntity<HrefEntityDTO>(this.libraryService.delete(id), HttpStatus.OK);
+	}
+	
+	@GetMapping(BibliotecaConstant.RESOURCE_LIBRARYS + BibliotecaConstant.RESOURCE_LIBRARYS_LIBRARY + BibliotecaConstant.RESOURCE_GENERIC_FILTER)
+	public ResponseEntity<List<LibraryDTO>> findByFilter(@RequestParam(required = true) @NotBlank String key_word){
+		return new ResponseEntity<List<LibraryDTO>>(this.libraryService.findByKeyWordJPA(key_word), HttpStatus.OK);
 	}
 
 }

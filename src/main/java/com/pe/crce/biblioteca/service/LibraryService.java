@@ -1,5 +1,7 @@
 package com.pe.crce.biblioteca.service;
 
+import java.util.List;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
@@ -12,4 +14,5 @@ public interface LibraryService {
 	public HrefEntityDTO update(LibraryDTORequest dto, Long id);
 	public HrefEntityDTO delete(Long id);
 	public LibraryDTO findById(Long id);
+	public List<LibraryDTO> findByKeyWordJPA(String key_word);
 }
