@@ -106,9 +106,12 @@ com.pe.crce.biblioteca.controller.BookController#findByKeyWord(String, PageableD
 06:54:50.539 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
 06:54:58.133 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-34
 06:55:20.824 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
+<<<<<<< HEAD
 06:58:16.011 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
 06:58:16.030 [RMI TCP Connection(13)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
 06:58:16.034 [RMI TCP Connection(13)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
 06:58:16.052 [RMI TCP Connection(13)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 06:58:16.063 [RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 06:58:16.067 [RMI TCP Connection(13)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+=======
+>>>>>>> develop

@@ -57,7 +57,7 @@ public class BookServiceImpl implements BookService{
 				.orElseThrow(()-> new EntityNotFoundException("not found subarea"));
 		Book book = Book.builder()
 				.title(dto.getTitle())
-				.subtitle(dto.getSubtitle())
+				.subtitle(dto.getSubTitle())
 				.isbn(dto.getIsbn())
 				.description(dto.getDescription())
 				.numberPage(dto.getNumberPage())
@@ -76,7 +76,7 @@ public class BookServiceImpl implements BookService{
 		Book book = this.bookRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found book"));
 		book.setTitle(dto.getTitle());
-		book.setSubtitle(dto.getSubtitle());
+		book.setSubtitle(dto.getSubTitle());
 		book.setDescription(dto.getDescription());
 		book.setNumberPage(dto.getNumberPage());
 		book.setYearPublication(dto.getYearPublication());
@@ -104,5 +104,9 @@ public class BookServiceImpl implements BookService{
 	public Page<BookDTO> findByKeyWordJPQL(String key_word, Pageable pageable) {
 		Page<Book> books = this.bookRepository.findByKeyWordJPQL(key_word, BibliotecaConstant.STATE_ACTIVE, pageable);
 		return books.map((b)-> this.bookMapper.toDto(b));
+	}
+	@Override
+	public Boolean existsByIsbn(String isbn) {
+		return this.bookRepository.existsByIsbnAndState(isbn, BibliotecaConstant.STATE_ACTIVE);
 	}
 }

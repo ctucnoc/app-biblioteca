@@ -1,5 +1,8 @@
 package com.pe.crce.biblioteca.service.impl;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
@@ -72,6 +75,16 @@ public class LibraryServiceImpl implements LibraryService {
 		Library library = this.libraryRepositorio.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found library"));
 		return this.libraryMapper.toDto(library);
+	}
+
+	@Override
+	public List<LibraryDTO> findByKeyWordJPA(String key_word) {
+		return this.libraryRepositorio.findByKeyWordLikeJPA(BibliotecaUtil.preFormatCadena(key_word), BibliotecaConstant.STATE_ACTIVE)
+				.stream()
+				.limit(15)
+				.map((bean)-> libraryMapper.toDto(bean))
+				.collect(Collectors.toList());
+				
 	}
 
 }

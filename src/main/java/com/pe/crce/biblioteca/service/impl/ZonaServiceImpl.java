@@ -87,6 +87,14 @@ public class ZonaServiceImpl implements ZonaService{
 		log.info("crce service findById -> {} " +zone.toString());
 		return this.zoneMapper.toDto(zone);
 	}
+
+	@Override
+	public Page<ZoneDTO> findByLibrary(Long idLibrary, Pageable pageable) {
+		Library library = this.libraryRepositorio.findByIdAndState(idLibrary, BibliotecaConstant.STATE_ACTIVE)
+				.orElseThrow(()-> new EntityNotFoundException("not found library"));
+		return this.zonaRepository.findByLibraryAndState(library, BibliotecaConstant.STATE_ACTIVE,pageable)
+				.map((zona)-> this.zoneMapper.toDto(zona));
+	}
 	
 	
 }

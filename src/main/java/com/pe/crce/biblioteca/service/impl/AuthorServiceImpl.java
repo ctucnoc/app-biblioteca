@@ -61,7 +61,7 @@ public class AuthorServiceImpl implements AuthorService{
 	public HrefEntityDTO delete(Long id) {
 		Author author = this.authorRepository.findByIdAndState(id, BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found author"));
-		author.setName(BibliotecaConstant.STATE_INACTIVE);
+		author.setState(BibliotecaConstant.STATE_INACTIVE);
 		return util.createHrefFromResource(this.authorRepository.save(author).getId(), BibliotecaResource.AUTHOR);
 	}
 

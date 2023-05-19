@@ -13,5 +13,6 @@ public interface ZonaService {
 	public HrefEntityDTO update(ZoneDTORequest dto,Long id);
 	public HrefEntityDTO delete(Long id);
 	public Page<ZoneDTO> findByDescription(String description,Pageable pageable);
+	public Page<ZoneDTO> findByLibrary(Long idLibrary,Pageable pageable);
 	public ZoneDTO findById(Long id);
 }

@@ -75,6 +75,5 @@ public class BookAuthorServiceImpl implements BookAuthorService{
 				.orElseThrow(()-> new EntityNotFoundException("not found boo author"));
 		bookAuthor.setState(BibliotecaConstant.STATE_INACTIVE);
 		return this.util.createHrefFromResource(this.bookAuthorRepository.save(bookAuthor).getId(), BibliotecaResource.BOOKAUTHOR);
-	}
-	
+	}	
 }
