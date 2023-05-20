@@ -53,7 +53,7 @@ public class BookServiceImpl implements BookService{
 	public HrefEntityDTO save(BookDTORequest dto) {
 		Editorial editorial = this.editorialRespository.findByIdAndState(dto.getIdEditorial(), BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found editorial"));
-		SubArea subArea = this.subAreaRepository.findByIdAndState(dto.getIdEditorial(), BibliotecaConstant.STATE_ACTIVE)
+		SubArea subArea = this.subAreaRepository.findByIdAndState(dto.getIdSubArea(), BibliotecaConstant.STATE_ACTIVE)
 				.orElseThrow(()-> new EntityNotFoundException("not found subarea"));
 		Book book = Book.builder()
 				.title(dto.getTitle())
