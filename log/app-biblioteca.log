@@ -1,108 +1,247 @@
-06:51:12.429 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 23888 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-06:51:12.434 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-06:51:12.501 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-06:51:12.501 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-06:51:13.555 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-06:51:13.697 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 125 ms. Found 10 JPA repository interfaces.
-06:51:14.597 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-06:51:14.614 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-06:51:14.615 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-06:51:14.738 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-06:51:14.739 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2237 ms
-06:51:14.980 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-06:51:15.100 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-06:51:15.403 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-06:51:15.565 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-06:51:15.834 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-06:51:15.880 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-06:51:16.855 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-06:51:16.870 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-06:51:18.041 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-06:51:18.122 [restartedMain] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'bookController' method 
-com.pe.crce.biblioteca.controller.BookController#existByIsbn(String)
-to {GET [/v1/app-biblioteca/books/book]}: There is already 'bookController' bean method
-com.pe.crce.biblioteca.controller.BookController#findByKeyWord(String, PageableDTO) mapped.
-06:51:18.126 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
-06:51:18.131 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
-06:51:18.141 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
-06:51:18.145 [restartedMain] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-06:51:18.163 [restartedMain] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-06:51:18.192 [restartedMain] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/web/servlet/config/annotation/DelegatingWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'bookController' method 
-com.pe.crce.biblioteca.controller.BookController#existByIsbn(String)
-to {GET [/v1/app-biblioteca/books/book]}: There is already 'bookController' bean method
-com.pe.crce.biblioteca.controller.BookController#findByKeyWord(String, PageableDTO) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1804)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:620)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:918)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:583)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:147)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:731)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:408)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:307)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1303)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1292)
-	at com.pe.crce.biblioteca.AppBibliotecaApplication.main(AppBibliotecaApplication.java:15)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49)
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'bookController' method 
-com.pe.crce.biblioteca.controller.BookController#existByIsbn(String)
-to {GET [/v1/app-biblioteca/books/book]}: There is already 'bookController' bean method
-com.pe.crce.biblioteca.controller.BookController#findByKeyWord(String, PageableDTO) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:669)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:635)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:332)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:420)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:299)
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:721)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:297)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:266)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:225)
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:213)
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:205)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1863)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1800)
-	... 21 common frames omitted
-06:52:54.839 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 27180 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
-06:52:54.841 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
-06:52:54.903 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-06:52:54.903 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-06:52:55.766 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-06:52:55.884 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 108 ms. Found 10 JPA repository interfaces.
-06:52:56.618 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
-06:52:56.629 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-06:52:56.629 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
-06:52:56.723 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-06:52:56.723 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1819 ms
-06:52:56.884 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
-06:52:56.944 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
-06:52:57.130 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-06:52:57.246 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
-06:52:57.453 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
-06:52:57.495 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
-06:52:58.419 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-06:52:58.431 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
-06:52:59.571 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-06:53:00.351 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
-06:53:00.412 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
-06:53:00.427 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 6.086 seconds (JVM running for 7.272)
-06:53:55.917 [http-nio-9090-exec-2] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-06:53:55.917 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
-06:53:55.919 [http-nio-9090-exec-2] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
-06:53:55.947 [http-nio-9090-exec-2] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /v1/app-biblioteca/books/boo/filter
-06:54:31.574 [http-nio-9090-exec-3] WARN  o.s.web.servlet.PageNotFound - No mapping for GET /v1/app-biblioteca/books/boo/filter
-06:54:50.539 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
-06:54:58.133 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-34
-06:55:20.824 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
+06:05:53.841 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 14548 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+06:05:53.847 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+06:05:53.923 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+06:05:53.923 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+06:05:56.337 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+06:05:56.479 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 126 ms. Found 10 JPA repository interfaces.
+06:05:57.311 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+06:05:57.328 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+06:05:57.329 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+06:05:57.455 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+06:05:57.455 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 3531 ms
+06:05:57.658 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+06:05:57.759 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+06:05:58.049 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+06:05:58.236 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+06:05:58.739 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+06:05:58.798 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+06:05:59.813 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+06:05:59.826 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+06:06:00.940 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+06:06:01.728 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+06:06:01.790 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+06:06:01.803 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 8.598 seconds (JVM running for 9.835)
+06:07:30.792 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+06:07:30.792 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+06:07:30.809 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 16 ms
+06:07:30.951 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:08:29.346 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:10:10.213 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:11:08.305 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:11:34.260 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:12:54.836 [http-nio-9090-exec-8] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+06:12:57.107 [http-nio-9090-exec-10] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=1, size=3, order=Optional[1], field=Optional[id])
+06:13:01.496 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+06:13:03.286 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=1, size=3, order=Optional[1], field=Optional[id])
+06:13:05.405 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+06:13:09.044 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:13:33.769 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:13:37.052 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:13:42.890 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:25:48.306 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:26:01.075 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:28:49.674 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:28:56.923 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:29:52.252 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:29:58.221 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:30:17.106 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:30:20.589 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:30:54.624 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:31:32.073 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:32:02.816 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:32:10.869 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:34:08.361 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:34:11.007 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:40:42.560 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:40:47.463 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:42:06.027 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:42:15.134 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:42:58.409 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:43:02.070 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:44:36.472 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:44:45.804 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:48:02.520 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:48:17.316 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:52:27.044 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:52:30.956 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:54:12.424 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:54:24.585 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:55:05.214 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:55:09.333 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:55:22.667 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:56:31.309 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:56:35.804 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=1, size=5, order=Optional[1], field=Optional[id])
+06:56:40.759 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce controler delete -> {} 14
+06:56:41.077 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+06:57:28.035 [http-nio-9090-exec-6] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+06:57:33.165 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+06:57:36.142 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 11
+06:57:39.526 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+06:57:44.678 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:57:49.160 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:57:58.633 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:58:04.036 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+06:58:08.124 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:00:04.709 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:00:22.688 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:00:28.763 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:00:34.233 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:00:35.899 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:00:40.896 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:02:39.341 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce controler delete -> {} 15
+07:02:39.374 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:03:10.024 [http-nio-9090-exec-9] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:03:13.297 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:03:21.443 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:03:24.240 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:03:28.902 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:04:28.879 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce controler delete -> {} 16
+07:04:28.906 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:04:58.064 [http-nio-9090-exec-9] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:05:01.165 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:05:05.918 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 11
+07:05:10.071 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:05:16.008 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:05:18.613 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:05:21.924 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:09:14.280 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:09:15.661 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=1, size=5, order=Optional[1], field=Optional[id])
+07:10:42.699 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+07:10:42.872 [Thread-5] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+07:10:42.886 [Thread-5] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+07:10:42.982 [Thread-5] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07:10:43.034 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+07:10:43.062 [Thread-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+07:10:43.550 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 14548 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+07:10:43.550 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+07:10:44.053 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:10:44.141 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 10 JPA repository interfaces.
+07:10:44.400 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+07:10:44.401 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07:10:44.401 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+07:10:44.437 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07:10:44.437 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 884 ms
+07:10:44.508 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07:10:44.516 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Starting...
+07:10:44.592 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Start completed.
+07:10:44.592 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+07:10:44.748 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:10:44.749 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:10:45.469 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:10:45.807 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07:10:45.831 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+07:10:45.839 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 2.342 seconds (JVM running for 3893.871)
+07:10:45.842 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+07:10:49.309 [File Watcher] INFO  o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener - Restarting due to 3 class path changes (0 additions, 0 deletions, 3 modifications)
+07:10:49.318 [Thread-7] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+07:10:49.325 [Thread-7] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+07:10:49.326 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown initiated...
+07:10:49.329 [Thread-7] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-2 - Shutdown completed.
+07:10:49.412 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 14548 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+07:10:49.413 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+07:10:49.634 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+07:10:49.681 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 47 ms. Found 10 JPA repository interfaces.
+07:10:49.780 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+07:10:49.781 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+07:10:49.781 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+07:10:49.802 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+07:10:49.802 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 388 ms
+07:10:49.832 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+07:10:49.837 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Starting...
+07:10:49.894 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Start completed.
+07:10:49.895 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+07:10:49.980 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+07:10:49.980 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+07:10:50.391 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+07:10:50.589 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+07:10:50.604 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+07:10:50.607 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 1.225 seconds (JVM running for 3898.639)
+07:10:50.609 [restartedMain] INFO  o.s.b.d.a.ConditionEvaluationDeltaLoggingListener - Condition evaluation unchanged
+07:11:01.413 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+07:11:01.413 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+07:11:01.415 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+07:11:01.426 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce controler delete -> {} 17
+07:11:01.506 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:12:06.062 [http-nio-9090-exec-5] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:12:09.742 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+07:12:14.169 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+07:12:59.430 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:13:35.189 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:14:23.747 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=1, size=5, order=Optional[1], field=Optional[id])
+07:30:17.353 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:50:32.664 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:51:42.475 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:58:40.749 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:58:51.187 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+07:59:47.591 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+08:00:20.155 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+08:01:05.804 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+08:01:42.552 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+08:04:18.657 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+08:04:43.642 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+10:27:22.444 [HikariPool-3 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-3 - Thread starvation or clock leap detected (housekeeper delta=1h5m460ms786µs800ns).
+10:47:03.074 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+10:47:06.745 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=7, size=5, order=Optional[1], field=Optional[id])
+12:24:29.057 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:25:29.530 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:28:03.207 [http-nio-9090-exec-10] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:30:31.249 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:32:13.668 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:33:17.766 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:34:06.698 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+12:45:03.918 [RMI TCP Connection(347)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+12:45:03.995 [RMI TCP Connection(347)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+12:45:03.999 [RMI TCP Connection(347)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+12:45:04.050 [RMI TCP Connection(347)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+12:45:04.066 [RMI TCP Connection(347)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown initiated...
+12:45:04.068 [RMI TCP Connection(347)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-3 - Shutdown completed.
+14:15:34.300 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Starting AppBibliotecaApplication using Java 17.0.6 on LAPTOP-JAN5R6IP with PID 16412 (D:\proyecto spring boot\WorkSpace\app-biblioteca\target\classes started by Cristian Tucno Conde in D:\proyecto spring boot\WorkSpace\app-biblioteca)
+14:15:34.301 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - The following 1 profile is active: "dev"
+14:15:34.351 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+14:15:34.351 [restartedMain] INFO  o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor - For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+14:15:36.163 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:15:36.275 [restartedMain] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 10 JPA repository interfaces.
+14:15:36.925 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 9090 (http)
+14:15:36.937 [restartedMain] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+14:15:36.937 [restartedMain] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.71]
+14:15:37.016 [restartedMain] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+14:15:37.016 [restartedMain] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2665 ms
+14:15:37.160 [restartedMain] INFO  o.h.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+14:15:37.223 [restartedMain] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.15.Final
+14:15:37.400 [restartedMain] INFO  o.h.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+14:15:37.513 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+14:15:37.858 [restartedMain] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+14:15:37.891 [restartedMain] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.hibernate.dialect.PostgreSQL10Dialect
+14:15:38.665 [restartedMain] INFO  o.h.e.t.j.p.i.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+14:15:38.678 [restartedMain] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:15:39.571 [restartedMain] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+14:15:40.130 [restartedMain] INFO  o.s.b.d.a.OptionalLiveReloadServer - LiveReload server is running on port 35729
+14:15:40.178 [restartedMain] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 9090 (http) with context path ''
+14:15:40.189 [restartedMain] INFO  c.p.c.b.AppBibliotecaApplication - Started AppBibliotecaApplication in 6.363 seconds (JVM running for 7.674)
+14:57:32.927 [http-nio-9090-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:57:32.934 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+14:57:32.986 [http-nio-9090-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 51 ms
+14:57:33.221 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:04:12.061 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:04:43.968 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:05:31.013 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:06:20.719 [http-nio-9090-exec-6] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:10:07.441 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:18:25.966 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
+15:18:32.197 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-31
+15:18:39.515 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
+15:31:25.881 [http-nio-9090-exec-3] INFO  c.p.c.b.controller.BookController - crce BookController findByKeyWord -> {} PageableDTO(page=0, size=5, order=Optional[1], field=Optional[id])
+15:32:48.997 [http-nio-9090-exec-8] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641
+15:32:50.239 [http-nio-9090-exec-7] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-
+15:33:02.496 [http-nio-9090-exec-9] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-3
+15:33:23.091 [http-nio-9090-exec-10] INFO  c.p.c.b.c.EditorialController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+15:33:27.288 [http-nio-9090-exec-1] INFO  c.p.c.b.controller.AreaController - controller -> {} PageableDTO(page=0, size=3, order=Optional[1], field=Optional[id])
+15:33:30.395 [http-nio-9090-exec-2] INFO  c.p.c.b.controller.SubAreaController - crce controller findById -> {} 1
+15:33:41.971 [http-nio-9090-exec-4] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-
+15:33:43.061 [http-nio-9090-exec-5] INFO  c.p.c.b.controller.BookController - crce controler existByIsbn -> {} 0-7645-2641-4
+15:34:43.377 [RMI TCP Connection(87)-127.0.0.1] INFO  o.s.b.a.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin - Application shutdown requested.
+15:34:43.454 [RMI TCP Connection(87)-127.0.0.1] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+15:34:43.460 [RMI TCP Connection(87)-127.0.0.1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Destroying Spring FrameworkServlet 'dispatcherServlet'
+15:34:43.503 [RMI TCP Connection(87)-127.0.0.1] INFO  o.s.o.j.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+15:34:43.525 [RMI TCP Connection(87)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+15:34:43.543 [RMI TCP Connection(87)-127.0.0.1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
