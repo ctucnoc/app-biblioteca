@@ -65,6 +65,7 @@ public final class BibliotecaConstant {
 	public static final String RESOURCE_GENERIC_FILTER = "/filter";
 	public static final String RESOURCE_AREA_ID = "/filter/{idArea}";
 	public static final String RESOURCE_LIBRARY_ID = "/filter/{idLibrary}";
+	public static final String RESOURCE_EXPORT_EXCEL = "/export-excel";
 
 	// =============================================================================================
 	// PATH DEL SISTEMA BIBLIOTECA FROENT-END
@@ -99,5 +100,33 @@ public final class BibliotecaConstant {
 	public static final String SP_SAVE_AUTHOR_COUNT = "select count(*) from dbo.fn_save_author(?1,?2)";
 	public static final String SP_SEARCH_BOOK = "select * from dbo.fn_search_book_word_key(?1,?2)";
 	public static final String SP_SEARCH_BOOK_COUNT = "select count(*) from dbo.fn_search_book_word_key(?1,?2)";
+	
+	// =============================================================================================
+	// TIPOS DE FORMATOS DE ARCHIVOS
+	// =============================================================================================
+	/** FORMATO_ARCHIVOS */
+	public static final String FORMATO_EXCEL = ".xlsx";
+	public static final String FORMATO_PDF = ".pdf";
+	
+	// =============================================================================================
+	// MESAGE DE ERRORES
+	// =============================================================================================
+	/** ERROR_REPORTE */
+	public static final String ERROR_REPORTE = "Ocurrió un error al generar el reporte";
+	
+	// =============================================================================================
+	// TIPOS DE FORMATOS DE ARCHIVOS
+	// =============================================================================================
+	/** FORMATO_ARCHIVOS */
+	public static final String SHEET_AREA = "Lista-Area";
+	
+	public static final String VC_EMTY = "-";
+
+	
+	// =============================================================================================
+	// NOMBRE DE LOS REPORTES
+	// =============================================================================================
+	public static final String REPORT_NAME_AREA_PAGINABLE = "report-area";
+
 
 }

@@ -1,18 +1,22 @@
 package com.pe.crce.biblioteca.service.impl;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
-
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
+import com.pe.crce.biblioteca.constant.GetReportColumnsConstant;
 import com.pe.crce.biblioteca.dto.AreaDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.AreaDTORequest;
 import com.pe.crce.biblioteca.errorhandler.EntityNotFoundException;
+import com.pe.crce.biblioteca.export.ResourceExport;
 import com.pe.crce.biblioteca.mapper.AreaMapper;
 import com.pe.crce.biblioteca.model.Area;
 import com.pe.crce.biblioteca.repository.AreaRepository;
@@ -32,11 +36,15 @@ public class AreaServiceImpl implements AreaService{
 	
 	final
 	AreaMapper areaMapper;
+	
+	final
+	ResourceExport resourceExport;
 
-	public AreaServiceImpl(AreaRepository areaRepository, BibliotecaUtil util, AreaMapper areaMapper) {
+	public AreaServiceImpl(AreaRepository areaRepository, BibliotecaUtil util, AreaMapper areaMapper,ResourceExport resourceExport) {
 		this.areaRepository = areaRepository;
 		this.util = util;
 		this.areaMapper = areaMapper;
+		this.resourceExport = resourceExport;
 	}
 
 	@Override
@@ -83,6 +91,31 @@ public class AreaServiceImpl implements AreaService{
 				.limit(15)
 				.map((bean)-> areaMapper.toDto(bean))
 				.collect(Collectors.toList());
+	}
+
+	@Override
+	public File exportDataExcel(List<AreaDTO> areas) throws Exception {
+		
+		List<String> sheets = List.of(BibliotecaConstant.SHEET_AREA);
+		
+		Map<String, List<String>> colsBySheet = new HashMap<>();
+		List<String> cols = List.of(GetReportColumnsConstant.COL_AREA_ID,GetReportColumnsConstant.COL_AREA_DESCRIPTION);
+
+		
+		colsBySheet.put(BibliotecaConstant.SHEET_AREA, cols);
+		
+		Map<String, List<Map<String, String>>> valuesBySheet = new HashMap<>();
+		List<Map<String, String>> valoresHoja = new ArrayList<>();
+		
+		areas.forEach(row -> {
+			Map<String, String> valuesHojaRow = new HashMap<>();
+			valuesHojaRow.put(GetReportColumnsConstant.COL_AREA_ID, row.getId() == null ? BibliotecaConstant.VC_EMTY : row.getId().toString());
+			valuesHojaRow.put(GetReportColumnsConstant.COL_AREA_DESCRIPTION, row.getDescription().toLowerCase());
+			valoresHoja.add(valuesHojaRow);
+		});
+		valuesBySheet.put(BibliotecaConstant.SHEET_AREA, valoresHoja);
+				
+		return this.resourceExport.generateExcel(sheets, colsBySheet, valuesBySheet, BibliotecaConstant.REPORT_NAME_AREA_PAGINABLE);
 	}
 	
 }

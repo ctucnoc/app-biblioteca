@@ -1,12 +1,16 @@
 package com.pe.crce.biblioteca.controller;
 
+import java.io.File;
 import java.util.List;
-
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -76,5 +80,20 @@ public class AreaController {
 	@GetMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA + BibliotecaConstant.RESOURCE_GENERIC_FILTER)
 	public ResponseEntity<List<AreaDTO>> findByDescriptionFilter(@RequestParam @NotBlank String description){
 		return new ResponseEntity<List<AreaDTO>>(this.areaService.findByDescriptionFilter(description), HttpStatus.OK);
+	}
+	
+	@GetMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA + BibliotecaConstant.RESOURCE_EXPORT_EXCEL)
+	public ResponseEntity<Resource> getExportDataExcel(@RequestParam(required = true) @NotBlank String description, PageableDTO pageable) throws Exception{
+		Page<AreaDTO> page = this.areaService.findByDescription(description, this.util.getPageable(pageable));
+		File file = this.areaService.exportDataExcel(page.getContent());
+		
+        // Configurar las cabeceras de la respuesta HTTP
+        HttpHeaders headers = new HttpHeaders();
+        headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+        headers.setContentDispositionFormData("attachment", file.getName());
+
+        // Crear la respuesta HTTP con el objeto File
+        FileSystemResource fileResource = new FileSystemResource(file);
+        return new ResponseEntity<Resource>(fileResource, headers, HttpStatus.OK);
 	}
 }
