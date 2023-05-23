@@ -1,4 +1,4 @@
-package com.pe.crce.biblioteca.export;
+package com.pe.crce.biblioteca.helper;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -17,7 +17,7 @@ import org.apache.poi.ss.usermodel.Sheet;
 import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class ExcelHelperExport {
+public class ExcelExportHelper {
 
 	/** BOLD_FALSE */
 	public static final Boolean BOLD_FALSE = false;
