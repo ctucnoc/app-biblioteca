@@ -24,5 +24,5 @@ public interface AreaService {
 	
 	public List<AreaDTO> findByDescriptionFilter(String description);
 	
-	public File exportDataExcel(List<AreaDTO> areas) throws Exception;
+	public File exportDataExcel(List<AreaDTO> areas);
 }

@@ -94,7 +94,7 @@ public class AreaServiceImpl implements AreaService{
 	}
 
 	@Override
-	public File exportDataExcel(List<AreaDTO> areas) throws Exception {
+	public File exportDataExcel(List<AreaDTO> areas){
 		
 		List<String> sheets = List.of(BibliotecaConstant.SHEET_AREA);
 		

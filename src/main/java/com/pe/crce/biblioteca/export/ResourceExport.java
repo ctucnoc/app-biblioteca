@@ -7,5 +7,5 @@ import java.util.Map;
 public interface ResourceExport {
 
 	public File generateExcel(List<String> sheets, Map<String, List<String>> colsBySheet,
-			Map<String, List<Map<String, String>>> valuesBySheet, String fileName) throws Exception;
+			Map<String, List<Map<String, String>>> valuesBySheet, String fileName);
 }
