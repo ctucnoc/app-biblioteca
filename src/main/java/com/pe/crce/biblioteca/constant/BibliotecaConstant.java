@@ -1,5 +1,7 @@
 package com.pe.crce.biblioteca.constant;
 
+import java.util.List;
+
 public final class BibliotecaConstant {
 
 	// =============================================================================================
@@ -107,6 +109,9 @@ public final class BibliotecaConstant {
 	/** FORMATO_ARCHIVOS */
 	public static final String FORMATO_EXCEL = ".xlsx";
 	public static final String FORMATO_PDF = ".pdf";
+	public static final String FORMATO_EXCEL_ABREVIATURA = "EXCEL";
+	public static final String FORMATO_PDF_ABREVIATURA = "PDF";
+	public static final List<String> ARRAY_FORMATO = List.of(FORMATO_EXCEL_ABREVIATURA,FORMATO_PDF_ABREVIATURA);
 	
 	// =============================================================================================
 	// MESAGE DE ERRORES

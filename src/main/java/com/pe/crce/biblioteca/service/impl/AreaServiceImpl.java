@@ -8,6 +8,7 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
@@ -15,6 +16,7 @@ import com.pe.crce.biblioteca.constant.GetReportColumnsConstant;
 import com.pe.crce.biblioteca.dto.AreaDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.AreaDTORequest;
+import com.pe.crce.biblioteca.errorhandler.EntityGenericClientException;
 import com.pe.crce.biblioteca.errorhandler.EntityNotFoundException;
 import com.pe.crce.biblioteca.export.ResourceExport;
 import com.pe.crce.biblioteca.mapper.AreaMapper;
@@ -24,8 +26,11 @@ import com.pe.crce.biblioteca.service.AreaService;
 import com.pe.crce.biblioteca.util.BibliotecaResource;
 import com.pe.crce.biblioteca.util.BibliotecaUtil;
 
-@Transactional
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 @Service
+@Transactional
 public class AreaServiceImpl implements AreaService{
 
 	final
@@ -94,7 +99,13 @@ public class AreaServiceImpl implements AreaService{
 	}
 
 	@Override
-	public File exportDataExcel(List<AreaDTO> areas) throws Exception {
+	public File exportDataExcel(List<AreaDTO> areas, String formato) throws Exception {
+		log.info("crce service exportDataExcel -> {} "+!BibliotecaConstant.ARRAY_FORMATO.contains(formato));
+		if(!BibliotecaConstant.ARRAY_FORMATO.contains(formato)) {
+			throw new EntityGenericClientException(String.format("s% format not allowed", formato), HttpStatus.BAD_GATEWAY);
+		}
+		
+		log.info("hola celia");
 		
 		List<String> sheets = List.of(BibliotecaConstant.SHEET_AREA);
 		
@@ -115,7 +126,11 @@ public class AreaServiceImpl implements AreaService{
 		});
 		valuesBySheet.put(BibliotecaConstant.SHEET_AREA, valoresHoja);
 				
-		return this.resourceExport.generateExcel(sheets, colsBySheet, valuesBySheet, BibliotecaConstant.REPORT_NAME_AREA_PAGINABLE);
+		if(formato.equals(BibliotecaConstant.FORMATO_EXCEL_ABREVIATURA)) {
+			return this.resourceExport.generateExcel(sheets, colsBySheet, valuesBySheet, BibliotecaConstant.REPORT_NAME_AREA_PAGINABLE);
+		}else {
+			return this.resourceExport.generatePdf(sheets, colsBySheet, valuesBySheet, BibliotecaConstant.REPORT_NAME_AREA_PAGINABLE);
+		}
 	}
 	
 }

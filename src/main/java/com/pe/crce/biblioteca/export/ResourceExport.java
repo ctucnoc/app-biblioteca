@@ -8,4 +8,7 @@ public interface ResourceExport {
 
 	public File generateExcel(List<String> sheets, Map<String, List<String>> colsBySheet,
 			Map<String, List<Map<String, String>>> valuesBySheet, String fileName) throws Exception;
+	
+	public File generatePdf(List<String> tables, Map<String, List<String>> colsByTables,
+			Map<String, List<Map<String, String>>> valuesByTable, String fileName) throws Exception;
 }

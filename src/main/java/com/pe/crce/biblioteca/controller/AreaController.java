@@ -83,9 +83,10 @@ public class AreaController {
 	}
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA + BibliotecaConstant.RESOURCE_EXPORT_EXCEL)
-	public ResponseEntity<Resource> getExportDataExcel(@RequestParam(required = true) @NotBlank String description, PageableDTO pageable) throws Exception{
+	public ResponseEntity<Resource> getExportDataExcel(@RequestParam(required = true) @NotBlank String description, @RequestParam(required = true) @NotBlank String format,
+			PageableDTO pageable) throws Exception{
 		Page<AreaDTO> page = this.areaService.findByDescription(description, this.util.getPageable(pageable));
-		File file = this.areaService.exportDataExcel(page.getContent());
+		File file = this.areaService.exportDataExcel(page.getContent(),format);
 		
         // Configurar las cabeceras de la respuesta HTTP
         HttpHeaders headers = new HttpHeaders();
