@@ -57,7 +57,7 @@
 					"request": {
 						"method": "GET",
 						"header": [],
-						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial/1"
+						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial/10"
 					},
 					"response": []
 				},
@@ -68,7 +68,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"editorial la nueva era 2023444\"\r\n}",
+							"raw": "{\r\n    \"name\":\"\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -86,13 +86,22 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"editorial san cristobal abc\"\r\n}",
+							"raw": "{\r\n    \"name\":\"editorial nuevo amanecer del Perú\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
 								}
 							}
 						},
+						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial/11"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
 						"url": "http://localhost:9090/v1/app-biblioteca/editorials/editorial/10"
 					},
 					"response": []
@@ -108,7 +117,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=",
+							"raw": "http://localhost:9090/v1/app-biblioteca/authors/author?key_word=&page=0&size=8&field=id&order=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -124,6 +133,22 @@
 								{
 									"key": "key_word",
 									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
 								}
 							]
 						}
@@ -137,7 +162,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"name\":\"pablito\",\r\n    \"lastName\":\"bautista\"\r\n}",
+							"raw": "{\r\n    \"name\":\"pablito\",\r\n    \"lastName\":\"bautista de ayacucho\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -145,6 +170,42 @@
 							}
 						},
 						"url": "http://localhost:9090/v1/app-biblioteca/authors/author"
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/authors/author/1"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/authors/author/10"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"autor demo\",\r\n    \"lastName\":\"unsch ayacucho\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/authors/author/21"
 					},
 					"response": []
 				}
@@ -159,7 +220,7 @@
 						"method": "GET",
 						"header": [],
 						"url": {
-							"raw": "http://localhost:9090/v1/app-biblioteca/libraries/library?key_word=bibl",
+							"raw": "http://localhost:9090/v1/app-biblioteca/libraries/library?key_word=&page=0&size=5&field=id&order=1",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -174,30 +235,1025 @@
 							"query": [
 								{
 									"key": "key_word",
-									"value": "bibl"
+									"value": ""
 								},
 								{
 									"key": "page",
-									"value": "1",
-									"disabled": true
+									"value": "0"
 								},
 								{
 									"key": "size",
-									"value": "5",
-									"disabled": true
+									"value": "5"
 								},
 								{
 									"key": "field",
-									"value": "id",
-									"disabled": true
+									"value": "id"
 								},
 								{
 									"key": "order",
-									"value": "0",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/libraries/library/1"
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"biblioteca de facea\",\r\n    \"description\":\"biblioteca para la facultad de la facea\",\r\n    \"address\":\"compus universitario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/libraries/library"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"biblioteca facea\",\r\n    \"description\":\"biblioteca para la facultad de la facea\",\r\n    \"address\":\"compus universitario\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/libraries/library/4"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/libraries/library/4"
+					},
+					"response": []
+				},
+				{
+					"name": "findByFilter",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "area",
+			"item": [
+				{
+					"name": "findByDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/areas/area?description=&page=0&size=5&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"areas",
+								"area"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"matematica para niños\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/areas/area"
+					},
+					"response": []
+				},
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/areas/area/2"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"matematica diferencial\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/areas/area/13"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/areas/area/13"
+					},
+					"response": []
+				},
+				{
+					"name": "findBydescriptionFilter",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/areas/area/filter?description=area",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"areas",
+								"area",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": "area"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exportExcel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/areas/area/export-excel?description=&page=0&size=10&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"areas",
+								"area",
+								"export-excel"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								},
+								{
+									"key": "format",
+									"value": "text",
 									"disabled": true
 								}
 							]
 						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "sub_area",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/sub-areas/sub-area/10"
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"inteligencia de negocio\",\r\n    \"idArea\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/sub-areas/sub-area"
+					},
+					"response": []
+				},
+				{
+					"name": "findByDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/sub-areas/sub-area?description=&page=0&size=8&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"sub-areas",
+								"sub-area"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"informatica forence crce\",\r\n    \"idArea\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/sub-areas/sub-area/10"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/sub-areas/sub-area/10"
+					},
+					"response": []
+				},
+				{
+					"name": "findByArea",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/sub-areas/sub-area/filter/1?page=0&size=5&field&order",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"sub-areas",
+								"sub-area",
+								"filter",
+								"1"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "field",
+									"value": null
+								},
+								{
+									"key": "order",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Zona",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/zones/zone/5"
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"zona de ejemplo\",\r\n    \"idLibrary\":1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/zones/zone"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"description\":\"zona de ejemplo unsch\",\r\n    \"idLibrary\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/zones/zone/5"
+					},
+					"response": []
+				},
+				{
+					"name": "findByDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/zones/zone?description=&page=0&size=8&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"zones",
+								"zone"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/zones/zone/5"
+					},
+					"response": []
+				},
+				{
+					"name": "findByLibrary",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/zones/zone/filter/1?&page=0&size=8&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"zones",
+								"zone",
+								"filter",
+								"1"
+							],
+							"query": [
+								{
+									"key": null,
+									"value": null
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/books/book/1"
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"xyc ayacucho\",\r\n    \"subTitle\":\"xyc ayacucho\",\r\n    \"isbn\":\"90-12344-67\",\r\n    \"description\":\"libro que descripve la ciudad de ayacucho\",\r\n    \"numberPage\":\"345\",\r\n    \"yearPublication\":\"2022\",\r\n    \"idEditorial\":4,\r\n    \"idSubArea\":2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/books/book"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\":\"xyc ayacucho\",\r\n    \"subtitle\":\"xyc ayacucho\",\r\n    \"isbn\":\"90-12344-67\",\r\n    \"description\":\"libro que descripve la ciudad de ayacucho\",\r\n    \"numberPage\":\"345\",\r\n    \"yearPublication\":\"2022\",\r\n    \"idEditorial\":4,\r\n    \"idSubArea\":9\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/books/book/9"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/books/book/9"
+					},
+					"response": []
+				},
+				{
+					"name": "findByWordKey",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/books/book?key_word=informatica&page=0&size=8&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"books",
+								"book"
+							],
+							"query": [
+								{
+									"key": "key_word",
+									"value": "informatica"
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "existByIsbn",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/books/book/filter?isbn=0-7645-2641-3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"books",
+								"book",
+								"filter"
+							],
+							"query": [
+								{
+									"key": "isbn",
+									"value": "0-7645-2641-3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "exportExcel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/books/book/export-excel?key_word=&page=0&size=10&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"books",
+								"book",
+								"export-excel"
+							],
+							"query": [
+								{
+									"key": "key_word",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "specimen_state",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/specimen-states/specimen-state/4"
+					},
+					"response": []
+				},
+				{
+					"name": "findByDescription",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/specimen-states/specimen-state?description=&page=0&size=8&field=id&order=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"specimen-states",
+								"specimen-state"
+							],
+							"query": [
+								{
+									"key": "description",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"demo estado\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/specimen-states/specimen-state"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/specimen-states/specimen-state/4"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"description\": \"mantenimiento\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/specimen-states/specimen-state/4"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "specimen",
+			"item": [
+				{
+					"name": "findById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/specimens/specimen/1"
+					},
+					"response": []
+				},
+				{
+					"name": "findByKeyWord",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/specimens/specimen?key_word=&page=0&size=8&field=id&order=0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"specimens",
+								"specimen"
+							],
+							"query": [
+								{
+									"key": "key_word",
+									"value": ""
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "8"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "0"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"FII002\",\r\n  \"quantity\": 5,\r\n  \"idBook\": 1,\r\n  \"idZone\": 1,\r\n  \"idSpecimenState\": 1\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/specimens/specimen"
+					},
+					"response": []
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"code\": \"FII002\",\r\n  \"quantity\": 5,\r\n  \"idBook\": 2,\r\n  \"idZone\": 2,\r\n  \"idSpecimenState\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/specimens/specimen/26"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/specimens/specimen/26"
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "book_author",
+			"item": [
+				{
+					"name": "findByBook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:9090/v1/app-biblioteca/book-authors/book-author/8?page=0&size=5&field=id&order=1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "9090",
+							"path": [
+								"v1",
+								"app-biblioteca",
+								"book-authors",
+								"book-author",
+								"8"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "0"
+								},
+								{
+									"key": "size",
+									"value": "5"
+								},
+								{
+									"key": "field",
+									"value": "id"
+								},
+								{
+									"key": "order",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"idBook\": 8,\r\n  \"idAuthor\": 3\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "http://localhost:9090/v1/app-biblioteca/book-authors/book-author"
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:9090/v1/app-biblioteca/book-authors/book-author/11"
 					},
 					"response": []
 				}

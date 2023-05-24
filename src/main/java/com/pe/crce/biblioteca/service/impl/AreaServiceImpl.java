@@ -99,13 +99,11 @@ public class AreaServiceImpl implements AreaService{
 	}
 
 	@Override
-	public File exportDataExcel(List<AreaDTO> areas, String formato) throws Exception {
+	public File exportDataExcel(List<AreaDTO> areas, String formato) {
 		log.info("crce service exportDataExcel -> {} "+!BibliotecaConstant.ARRAY_FORMATO.contains(formato));
 		if(!BibliotecaConstant.ARRAY_FORMATO.contains(formato)) {
 			throw new EntityGenericClientException(String.format("s% format not allowed", formato), HttpStatus.BAD_GATEWAY);
 		}
-		
-		log.info("hola celia");
 		
 		List<String> sheets = List.of(BibliotecaConstant.SHEET_AREA);
 		

@@ -28,11 +28,11 @@ public class ExcelExportHelper {
 	/**
 	 * Genera un excel basado en shhets
 	 * 
-	 * @param tables        Lista con los nombre de las hojas. Estos nombres serán
+	 * @param sheets        Lista con los nombre de las hojas. Estos nombres serán
 	 *                      la key de los siguientes mapas.
-	 * @param colsByTables  Mapa con las columnas de cada una de las hojas de la
+	 * @param colsBySheet  Mapa con las columnas de cada una de las hojas de la
 	 *                      lista. key=nombre de tabla.
-	 * @param valuesByTable Mapa con una lista de mapas. Se obtienen los datos de
+	 * @param valuesBySheet Mapa con una lista de mapas. Se obtienen los datos de
 	 *                      una hojas en el primer mapa a partir del nombre de la
 	 *                      hojas y en el segundo nivel, se obtienen los datos de
 	 *                      una columna a partir de su nombre
