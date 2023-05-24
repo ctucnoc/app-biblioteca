@@ -1,5 +1,6 @@
 package com.pe.crce.biblioteca.service;
 
+import java.io.File;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -22,4 +23,6 @@ public interface AreaService {
 	public AreaDTO findById(Long id);
 	
 	public List<AreaDTO> findByDescriptionFilter(String description);
+	
+	public File exportDataExcel(List<AreaDTO> areas);
 }

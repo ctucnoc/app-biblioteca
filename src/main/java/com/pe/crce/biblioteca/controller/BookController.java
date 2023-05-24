@@ -1,10 +1,16 @@
 package com.pe.crce.biblioteca.controller;
 
+import java.io.File;
+
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
 
+import org.springframework.core.io.FileSystemResource;
+import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
+import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -73,4 +79,21 @@ public class BookController {
 		log.info("crce controler existByIsbn -> {} "+isbn);
 		return new ResponseEntity<Boolean>(this.bookService.existsByIsbn(isbn),HttpStatus.OK);
 	}
+	
+	@GetMapping(BibliotecaConstant.RESOURCE_BOOKS + BibliotecaConstant.RESOURCE_BOOKS_BOOK + BibliotecaConstant.RESOURCE_EXPORT_EXCEL)
+	public ResponseEntity<Resource> generateExcel(@RequestParam String key_word, PageableDTO pageable){
+		Page<BookDTO> pages = this.bookService.findByKeyWordJPQL(key_word, this.util.getPageable(pageable));
+		File file = this.bookService.generateExcel(pages.getContent());
+		
+		// configuracion de la cabecera de las respuestas
+		
+		HttpHeaders headers = new HttpHeaders();
+		headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+		headers.setContentDispositionFormData("attachment", file.getName());
+		
+        // Crear la respuesta HTTP con el objeto File
+        FileSystemResource fileResource = new FileSystemResource(file);
+        return new ResponseEntity<Resource>(fileResource, headers, HttpStatus.OK);
+
+}
 }

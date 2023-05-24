@@ -1,5 +1,9 @@
 package com.pe.crce.biblioteca.util;
 
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
 import java.lang.reflect.Field;
 import java.text.DecimalFormat;
 import java.text.ParseException;
@@ -275,4 +279,24 @@ public final class BibliotecaUtil {
 		String ref_u = ref_o.toLowerCase().replace('ú', 'u');
 		return ref_u;
 	}
+
+	public static byte[] convertirFileAByteArray(File fichero) throws IOException {
+
+		try (FileInputStream fis = new FileInputStream(fichero);
+				ByteArrayOutputStream bos = new ByteArrayOutputStream()) {
+			byte[] buffer = new byte[1024];
+			int bytesRead;
+
+			while ((bytesRead = fis.read(buffer)) != -1) {
+				bos.write(buffer, 0, bytesRead);
+			}
+
+			return bos.toByteArray();
+		}
+	}
+	
+    public static boolean isNumber(String valor) {
+        String regex = "-?\\d+(\\.\\d+)?";
+        return Pattern.matches(regex, valor);
+    }
 }

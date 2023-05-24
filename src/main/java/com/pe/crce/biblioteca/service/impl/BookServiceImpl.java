@@ -1,14 +1,22 @@
 package com.pe.crce.biblioteca.service.impl;
 
+import java.io.File;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
+import com.pe.crce.biblioteca.constant.GetReportColumnsConstant;
 import com.pe.crce.biblioteca.dto.BookDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.BookDTORequest;
 import com.pe.crce.biblioteca.errorhandler.EntityNotFoundException;
+import com.pe.crce.biblioteca.export.ResourceExport;
 import com.pe.crce.biblioteca.mapper.BookMapper;
 import com.pe.crce.biblioteca.model.Book;
 import com.pe.crce.biblioteca.model.Editorial;
@@ -39,14 +47,18 @@ public class BookServiceImpl implements BookService{
 	
 	final
 	SubAreaRepository subAreaRepository;
+	
+	final
+	ResourceExport resourceExport;
 
 	public BookServiceImpl(BookRepository bookRepository, BookMapper bookMapper, BibliotecaUtil util,
-			EditorialRespository editorialRespository,SubAreaRepository subAreaRepository) {
+			EditorialRespository editorialRespository,SubAreaRepository subAreaRepository, ResourceExport resourceExport) {
 		this.bookRepository = bookRepository;
 		this.bookMapper = bookMapper;
 		this.util = util;
 		this.editorialRespository = editorialRespository;
 		this.subAreaRepository = subAreaRepository;
+		this.resourceExport = resourceExport;
 	}
 
 	@Override
@@ -108,5 +120,27 @@ public class BookServiceImpl implements BookService{
 	@Override
 	public Boolean existsByIsbn(String isbn) {
 		return this.bookRepository.existsByIsbnAndState(isbn, BibliotecaConstant.STATE_ACTIVE);
+	}
+
+	@Override
+	public File generateExcel(List<BookDTO> books) {
+		List<String> sheets = List.of(BibliotecaConstant.SHEET_BOOK);
+		
+		Map<String, List<String>> colsBySheet = new HashMap<>();
+		List<String> cols = List.of(GetReportColumnsConstant.COL_BOOK_TITULO,GetReportColumnsConstant.COL_BOOK_EDITORIAL);
+		
+		colsBySheet.put(BibliotecaConstant.SHEET_BOOK, cols);
+		
+		Map<String, List<Map<String, String>>> valuesBySheet = new HashMap<>();
+		List<Map<String, String>> valoresHoja = new ArrayList<>();
+		
+		books.forEach(row -> {
+			Map<String, String> valuesHojaRow = new HashMap<>();
+			valuesHojaRow.put(GetReportColumnsConstant.COL_BOOK_TITULO, row.getTitle().toLowerCase());
+			valuesHojaRow.put(GetReportColumnsConstant.COL_BOOK_EDITORIAL, row.getEditorial().getName().toLowerCase());
+			valoresHoja.add(valuesHojaRow);
+		});
+		valuesBySheet.put(BibliotecaConstant.SHEET_BOOK, valoresHoja);
+		return this.resourceExport.generateExcel(sheets, colsBySheet, valuesBySheet, BibliotecaConstant.REPORT_NAME_BOOK_PAGINABLE);
 	}
 }
