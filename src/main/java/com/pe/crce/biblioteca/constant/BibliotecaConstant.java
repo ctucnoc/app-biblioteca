@@ -119,6 +119,7 @@ public final class BibliotecaConstant {
 	// =============================================================================================
 	/** FORMATO_ARCHIVOS */
 	public static final String SHEET_AREA = "Lista-Area";
+	public static final String SHEET_BOOK = "Lista-Book";
 	
 	public static final String VC_EMTY = "-";
 
@@ -127,6 +128,7 @@ public final class BibliotecaConstant {
 	// NOMBRE DE LOS REPORTES
 	// =============================================================================================
 	public static final String REPORT_NAME_AREA_PAGINABLE = "report-area";
+	public static final String REPORT_NAME_BOOK_PAGINABLE = "report-book";
 
 
 }
