@@ -82,7 +82,7 @@ public class PdfExportHelper {
 	}
 
 	private static Style createHeaderCellStyle(int colSize) {
-		return createCellStyle(colSize, new DeviceRgb(102, 102, 153), HorizontalAlignment.CENTER);
+		return createCellStyle(colSize, new DeviceRgb(255,109,10), HorizontalAlignment.CENTER);
 	}
 
 	private static Style createCellStyle(int colSize) {

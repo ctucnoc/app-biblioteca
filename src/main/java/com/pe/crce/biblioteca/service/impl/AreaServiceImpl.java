@@ -8,7 +8,6 @@ import java.util.Map;
 import java.util.stream.Collectors;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
-import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import com.pe.crce.biblioteca.constant.BibliotecaConstant;
@@ -16,8 +15,8 @@ import com.pe.crce.biblioteca.constant.GetReportColumnsConstant;
 import com.pe.crce.biblioteca.dto.AreaDTO;
 import com.pe.crce.biblioteca.dto.HrefEntityDTO;
 import com.pe.crce.biblioteca.dto.request.AreaDTORequest;
-import com.pe.crce.biblioteca.errorhandler.EntityGenericClientException;
 import com.pe.crce.biblioteca.errorhandler.EntityNotFoundException;
+import com.pe.crce.biblioteca.errorhandler.EntityUnprocessableException;
 import com.pe.crce.biblioteca.export.ResourceExport;
 import com.pe.crce.biblioteca.mapper.AreaMapper;
 import com.pe.crce.biblioteca.model.Area;
@@ -25,7 +24,6 @@ import com.pe.crce.biblioteca.repository.AreaRepository;
 import com.pe.crce.biblioteca.service.AreaService;
 import com.pe.crce.biblioteca.util.BibliotecaResource;
 import com.pe.crce.biblioteca.util.BibliotecaUtil;
-
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
@@ -101,8 +99,9 @@ public class AreaServiceImpl implements AreaService{
 	@Override
 	public File exportDataExcel(List<AreaDTO> areas, String formato) {
 		log.info("crce service exportDataExcel -> {} "+!BibliotecaConstant.ARRAY_FORMATO.contains(formato));
+
 		if(!BibliotecaConstant.ARRAY_FORMATO.contains(formato)) {
-			throw new EntityGenericClientException(String.format("s% format not allowed", formato), HttpStatus.BAD_GATEWAY);
+			throw new EntityUnprocessableException(String.format("%s format not allowed", formato));
 		}
 		
 		List<String> sheets = List.of(BibliotecaConstant.SHEET_AREA);

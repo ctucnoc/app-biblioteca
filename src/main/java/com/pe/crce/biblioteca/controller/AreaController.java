@@ -4,7 +4,6 @@ import java.io.File;
 import java.util.List;
 import javax.validation.Valid;
 import javax.validation.constraints.NotBlank;
-
 import org.springframework.core.io.FileSystemResource;
 import org.springframework.core.io.Resource;
 import org.springframework.data.domain.Page;
@@ -83,8 +82,8 @@ public class AreaController {
 	}
 	
 	@GetMapping(BibliotecaConstant.RESOURCE_AREAS + BibliotecaConstant.RESOURCE_AREAS_AREA + BibliotecaConstant.RESOURCE_EXPORT_EXCEL)
-	public ResponseEntity<Resource> getExportDataExcel(@RequestParam(required = true) @NotBlank String description, @RequestParam(required = true) @NotBlank String format,
-			PageableDTO pageable) throws Exception{
+	public ResponseEntity<Resource> getExportDataExcel(@RequestParam String description, @RequestParam(required = true) @NotBlank String format,
+			PageableDTO pageable){
 
 		Page<AreaDTO> page = this.areaService.findByDescription(description, this.util.getPageable(pageable));
 		File file = this.areaService.exportDataExcel(page.getContent(),format);
